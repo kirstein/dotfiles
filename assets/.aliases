@@ -1,10 +1,41 @@
-### Aliases
-# Tools
+
+# -------------------------------------------------------------------
+# Pure awesome
+# -------------------------------------------------------------------
 alias slt="sublime-text-2"
 
-# Misc
+
+# -------------------------------------------------------------------
+# Git aliases
+# -------------------------------------------------------------------
+
+alias ga='git add -A'
+alias gp='git push'
+alias gl='git log'
+alias gs='git status'
+alias gd='git diff'
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gb='git branch'
+alias gc='git checkout'
+alias gpu='git pull'
+alias gcl='git clone'
+alias gta='git tag -a -m'
+alias gf='git reflog'
+
+alias gh='git hist'
+
+# -------------------------------------------------------------------
+# Capistrano aliases
+# -------------------------------------------------------------------
+
+alias capd='cap deploy'
+
+# -------------------------------------------------------------------
+# OTHER aliases
+# -------------------------------------------------------------------
+
+alias cl='clear'
 alias mkdir="mkdir -p"
 alias h="history"
 alias j="jobs"
-
-
