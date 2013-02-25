@@ -1,0 +1,19 @@
+### Aliases
+# Tools
+alias slt="sublime-text-2"
+
+# Misc
+alias mkdir="mkdir -p"
+alias h="history"
+
+### Helper functions
+function server() {
+  if [[ -z $1 ]]; then
+    PORT=8000
+  else
+    PORT="$1"
+  fi
+
+  python -m SimpleHTTPServer "$PORT" &
+  chromium-browser  "localhost:$PORT"
+}
