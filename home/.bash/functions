@@ -6,6 +6,6 @@ function server() {
     PORT="$1"
   fi
 
-  python -m SimpleHTTPServer "$PORT" &
-  chromium-browser  "localhost:$PORT"
+  chromium-browser  "localhost:$PORT" &
+  python -m SimpleHTTPServer $PORT
 }
