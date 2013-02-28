@@ -4,6 +4,7 @@ alias awesome="echo you are awesome";
 # Pure awesome
 # -------------------------------------------------------------------
 alias slt="sublime-text-2"
+alias homesick=""
 
 
 # -------------------------------------------------------------------
