@@ -1,0 +1,58 @@
+{
+	"auto_complete": false,
+	"auto_complete_commit_on_tab": true,
+	"auto_complete_delay": 50,
+	"bold_folder_labels": true,
+	"caret_style": "phase",
+	"close_windows_when_empty": false,
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"find_selected_text": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"_build",
+		"dist",
+		"build",
+		"site",
+		"target"
+	],
+	"font_face": "inconsolata",
+	"font_size": 13.0,
+	"highlight_line": false,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		""
+	],
+	"jshint_options":
+	{
+		"browser": true,
+		"evil": true,
+		"latedef": true,
+		"laxcomma": true,
+		"newcap": true,
+		"regexdash": true,
+		"regexp": true,
+		"sub": true,
+		"trailing": true,
+		"wsh": true
+	},
+	"line_padding_bottom": 1,
+	"rulers":
+	[
+		120
+	],
+	"save_on_focus_lost": true,
+	"show_minimap": false,
+	"spell_check": true,
+	"sublimelinter_fill_outlines": true,
+	"tab_completion": true,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"vintage_start_in_command_mode": true
+}

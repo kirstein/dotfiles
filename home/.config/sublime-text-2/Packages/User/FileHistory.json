@@ -1,0 +1,1335 @@
+{
+    "16652b2396d503859c83861e68370df8": {
+        "opened": [], 
+        "closed": [
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/tmp/test_coll"
+            }
+        ]
+    }, 
+    "05e8d77523b5c1b413aa2e44771ee839": {
+        "opened": [
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/lib/module/module.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/config/index.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/modules/mixins/anchor-route/anchor-route.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/test/module.factory.test.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/lib/util/index.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/lib/module/lib/validateObject.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/lib/module/lib/validateFiles.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/test/module.lib.validateConfig.test.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/node_modules/express-resource/examples/content-negotiation.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/Cakefile"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/lib/module/index.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/lib/common.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/lib/util/requirer.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/lib/util/index.js"
+            }
+        ], 
+        "closed": [
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/app/setup/modules.coffee"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/lib/module/type/mixin.coffee"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/lib/module/index.coffee"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/lib/module/factory.coffee"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/config/modules.json"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/modules/mixins/anchor-route/manifest.json"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/config/index.coffee"
+            }, 
+            {
+                "index": 5, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/test/module.test.coffee"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/app/setup/controllers.coffee"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/app/application.coffee"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/app/setup/app.coffee"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/public/js/config.coffee"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/test/util.requirer.test.coffee"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/lib/util/requirer.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": -1, 
+                "filename": "/home/mikk/workspace/page.js/app/controllers/main.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": -1, 
+                "filename": "/home/mikk/workspace/page.js/test/.mock/require/test.coffee"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/docs/MODULE.md"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/test/.mock/validateModule-complex-check/manifest.json"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/docs/GENERAL.todo"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/PlainTasks/Default (Linux).sublime-keymap"
+            }
+        ]
+    }, 
+    "cfd9f37838e22fccad867e8bab10d595": {
+        "opened": [
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/.homeshick"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/.homesick/repos/homeshick/utils/fs.sh"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/.zshrc"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/.bashrc"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/dot/test.sh"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/dot/manifest"
+            }
+        ], 
+        "closed": [
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/.bash/aliases"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/.homesick/repos/homeshick/utils/help.sh"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/.bash/.aliases"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/.bash_profile"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/dot/dot.sh"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/tmp/test_coll"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/tmp/prez/index.html"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/Gist/Gist.sublime-settings"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/.functions"
+            }
+        ]
+    }, 
+    "be32cdd9dfcf0a063d9eabdf393e4ead": {
+        "opened": [
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/test/spec/util/pubsub.test.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/fonts/sayitfat.otf"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/js/mythic.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/index.html"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/Cakefile"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/js/util/pubsub.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/test/specRunner.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/js/test/spec/lib/asset-loader.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/js/lib/require-jquery.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/js/game/menu/menu.js"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/.cache/.fr-OQjT7x/ShootEmUp.html"
+            }
+        ], 
+        "closed": [
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/IDEA.md"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/test/index.html"
+            }, 
+            {
+                "index": -1, 
+                "group": -1, 
+                "filename": "/home/mikk/workspace/mythic/public/test/specRunner.js"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/js/game/menu/menu.coffee"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/ave.html"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/js/game/menu/menuItem.coffee"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/js/game/gameobject.coffee"
+            }, 
+            {
+                "index": 9, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/js/test/spec/util/pubsub.test.coffee"
+            }, 
+            {
+                "index": 7, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/js/game/menu/menuItem.js"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/.cache/.fr-iaX20b/ShootEmUp.html"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/js/mythic.js"
+            }, 
+            {
+                "index": 5, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/js/lib/kinect-4.3.1.min.js"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/js/game/gameobject.js"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/public/js/page.coffee"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/public/js/main/app.coffee"
+            }
+        ]
+    }, 
+    "9ba824353d3b2aa0a3da08971e37a7eb": {
+        "opened": [
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/conjurer.js/test/spec/conjurer.test.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/conjurer.js/test/specRunner.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/conjurer.js/conjurer.js"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/conjurer.js/src/conjurer.coffee"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/conjurer.js/test/spec/conjurer.test.coffee"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/conjurer.js/index.html"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/conjurer.js/test/mythic.coffee"
+            }
+        ], 
+        "closed": [
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/conjurer.js/test/specRunner.coffee"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/conjurer.js/.gitignore"
+            }, 
+            {
+                "index": 5, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/conjurer.js/src/conjurer.js"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/public/test/specRunner.coffee"
+            }, 
+            {
+                "index": 5, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/conjurer.js/test/vendor/pubsub.js"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/public/test/index.html"
+            }
+        ]
+    }, 
+    "global": {
+        "opened": [
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/.homeshick"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/.homesick/repos/homeshick/utils/fs.sh"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/.zshrc"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/.bashrc"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/dot/test.sh"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/dot/manifest"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/canvas/canvasModule.coffee"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/layers/view/layers.coffee"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/rightPanel/rightModule.coffee"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/rightPanel/view/general.coffee"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/stage/stage.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/server.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/canvas/view/canvas.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/Cakefile"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/README.md"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/coffee-coverage/node_modules/argparse/node_modules/underscore.string/test/test_standalone.html"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/coffee-coverage/node_modules/argparse/node_modules/underscore.string/test/strings_standalone.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/nib/index.styl"
+            }, 
+            {
+                "index": -1, 
+                "group": -1, 
+                "filename": "/home/mikk/workspace/bitprovider/config/index.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/IDEA.md"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/layers/layersModule.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/config/log4js.json"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/.bin/_mocha"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/express-resource/.gitmodules"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/express/node_modules/connect/lib/middleware/methodOverride.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/Makefile"
+            }, 
+            {
+                "index": 5, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/node_modules/mocha/lib/template.html"
+            }, 
+            {
+                "index": 1, 
+                "group": 1, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap"
+            }, 
+            {
+                "index": 0, 
+                "group": 1, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/Emmet/Default (Linux).sublime-keymap"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/README.md"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/test/pubsub.test.coffee"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/package.json"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/Cakefile"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/src/pubsub.coffee"
+            }, 
+            {
+                "index": 2, 
+                "group": 1, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/node_modules/coffee-coverage/node_modules/argparse/.jshintignore"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/.gitignore"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/.gitignore"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/log4js/test/setLevel-asymmetry-test.js"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/js-12022013.mdown"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/log4js/test/log-abspath-test.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/log4js/lib/appenders/gelf.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/supertest/test/fixtures/test_cert.pem"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/sinon/test/sinon_test.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/toolbar/view/tool.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/bit/pixel/pixeltypes/line.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/bit/pixel/pixeltype.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/layers/view/layers.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/stylus/lib/nodes/keyframes.js"
+            }
+        ], 
+        "closed": [
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/.bash/aliases"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/.homesick/repos/homeshick/utils/help.sh"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/.bash/.aliases"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/.bash_profile"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/dot/dot.sh"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/tmp/test_coll"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/tmp/prez/index.html"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/Gist/Gist.sublime-settings"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/.functions"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/bitprovider.coffee"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/User/Preferences.sublime-settings"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/BracketHighlighter/BracketHighlighter.sublime-settings"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/layers/layersModule.coffee"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/toolbar/toolbarModule.coffee"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/Makefile"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/Vintage/Default.sublime-keymap"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/Vintage/vintage_commands.py"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/Markdown Slideshow/Default.sublime-commands"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings"
+            }, 
+            {
+                "index": -1, 
+                "group": -1, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/toolbar/view/toolbar.coffee"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/lib/kinetic-4.3.1.min.js"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/layers/view/node.coffee"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/bit/pixel/pixeltypes/circle.coffee"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/bit/pixelfactory.coffee"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/common.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": -1, 
+                "filename": "/home/mikk/workspace/bitprovider/public/app.js"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/lib/conjurer.coffee"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/lib/pubsub-1.2.2.js"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/conjurer.js/test/specRunner.coffee"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/conjurer.js/.gitignore"
+            }, 
+            {
+                "index": 5, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/conjurer.js/src/conjurer.js"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/public/test/specRunner.coffee"
+            }, 
+            {
+                "index": 5, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/conjurer.js/test/vendor/pubsub.js"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/public/test/index.html"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/bit/toolbar/tool.coffee"
+            }, 
+            {
+                "index": 6, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/application/view/layout.jade"
+            }, 
+            {
+                "index": 5, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/bit/pixel/pixeltypes/.gitignore"
+            }, 
+            {
+                "index": -1, 
+                "group": -1, 
+                "filename": "/home/mikk/workspace/bitprovider/public/css/styles.css"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/application/app.coffee"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/css/styles.styl"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/test/first.test.coffee"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/Makefile"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/js/util/pubsub.coffee"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/application/controllers.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": -1, 
+                "filename": "/home/mikk/workspace/bitprovider/application/controller/index.coffee"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/app/views/index.jade"
+            }, 
+            {
+                "index": 8, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/User/CoffeeScript.sublime-settings"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/logs/.gitignore"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/server.coffee"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/app/application.coffee"
+            }
+        ]
+    }, 
+    "95658014861d22b58ccc8f283b29789a": {
+        "opened": [
+            {
+                "index": 5, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/node_modules/mocha/lib/template.html"
+            }, 
+            {
+                "index": 1, 
+                "group": 1, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap"
+            }, 
+            {
+                "index": 0, 
+                "group": 1, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/Emmet/Default (Linux).sublime-keymap"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/README.md"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/test/pubsub.test.coffee"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/package.json"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/Cakefile"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/src/pubsub.coffee"
+            }, 
+            {
+                "index": 2, 
+                "group": 1, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/node_modules/coffee-coverage/node_modules/argparse/.jshintignore"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/.gitignore"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/src/pubsub.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/src-cov/pubsub.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/pubsub.sublime-project"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/coverage.html"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/node_modules/uglify-js/node_modules/source-map/build/prefix-utils.jsm"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/pubsub.1.0.0-BETA.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/test/pubsub.suite.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/node_modules/mocha/node_modules/jade/lib/inline-tags.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/node_modules/uglify-js/node_modules/optimist/test/_/bin.js"
+            }
+        ], 
+        "closed": [
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/pubsub/Makefile"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/.zshrc"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/page.js/Makefile"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/mythic/public/js/util/pubsub.coffee"
+            }
+        ]
+    }, 
+    "d486cdd6271a2c8def8f1936c7bb3695": {
+        "opened": [
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/canvas/canvasModule.coffee"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/layers/view/layers.coffee"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/rightPanel/rightModule.coffee"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/rightPanel/view/general.coffee"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/stage/stage.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/server.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/canvas/view/canvas.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/Cakefile"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/README.md"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/coffee-coverage/node_modules/argparse/node_modules/underscore.string/test/test_standalone.html"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/coffee-coverage/node_modules/argparse/node_modules/underscore.string/test/strings_standalone.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/nib/index.styl"
+            }, 
+            {
+                "index": -1, 
+                "group": -1, 
+                "filename": "/home/mikk/workspace/bitprovider/config/index.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/IDEA.md"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/layers/layersModule.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/config/log4js.json"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/.bin/_mocha"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/express-resource/.gitmodules"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/node_modules/express/node_modules/connect/lib/middleware/methodOverride.js"
+            }, 
+            {
+                "index": -1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/Makefile"
+            }
+        ], 
+        "closed": [
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/bitprovider.coffee"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/User/Preferences.sublime-settings"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/BracketHighlighter/BracketHighlighter.sublime-settings"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/layers/layersModule.coffee"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/toolbar/toolbarModule.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": -1, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/toolbar/view/toolbar.coffee"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/lib/kinetic-4.3.1.min.js"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/modules/layers/view/node.coffee"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/bit/pixel/pixeltypes/circle.coffee"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/bit/pixelfactory.coffee"
+            }, 
+            {
+                "index": 4, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/common.coffee"
+            }, 
+            {
+                "index": -1, 
+                "group": -1, 
+                "filename": "/home/mikk/workspace/bitprovider/public/app.js"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/lib/conjurer.coffee"
+            }, 
+            {
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/lib/pubsub-1.2.2.js"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/bit/toolbar/tool.coffee"
+            }, 
+            {
+                "index": 6, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/application/view/layout.jade"
+            }, 
+            {
+                "index": 5, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/bitprovider/public/js/bit/pixel/pixeltypes/.gitignore"
+            }
+        ]
+    }, 
+    "d41d8cd98f00b204e9800998ecf8427e": {
+        "opened": [
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/js-12022013.mdown"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/User/Preferences.sublime-settings"
+            }
+        ], 
+        "closed": [
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/Vintage/Default.sublime-keymap"
+            }, 
+            {
+                "index": 3, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/Vintage/vintage_commands.py"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/Markdown Slideshow/Default.sublime-commands"
+            }, 
+            {
+                "index": 1, 
+                "group": 0, 
+                "filename": "/home/mikk/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings"
+            }, 
+            {
+                "index": 0, 
+                "group": 0, 
+                "filename": "/home/mikk/.cache/.fr-OQjT7x/ShootEmUp.html"
+            }
+        ]
+    }
+}

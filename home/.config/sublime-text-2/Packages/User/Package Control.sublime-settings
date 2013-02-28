@@ -1,0 +1,32 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"BracketHighlighter",
+		"ChangeList",
+		"ChangeQuotes",
+		"CoffeeLint",
+		"CoffeeScript",
+		"CTags",
+		"File History",
+		"Gist",
+		"Git",
+		"Jade",
+		"Jade Snippets",
+		"JavaScript Snippets",
+		"JsFormat",
+		"Markdown Preview",
+		"Markdown Slideshow",
+		"Package Control",
+		"PlainTasks",
+		"Shell Turtlestein",
+		"SideBarEnhancements",
+		"Stylus",
+		"sublime-better-coffeescript",
+		"SublimeBlockCursor",
+		"SublimeLinter Beta",
+		"Todo",
+		"TrailingSpaces",
+		"Vintage Surround"
+	]
+}
