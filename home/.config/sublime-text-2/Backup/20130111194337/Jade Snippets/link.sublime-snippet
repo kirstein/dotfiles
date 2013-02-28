@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+link(rel="stylesheet", type="text/css", href="${1:css/style.css}")
+]]></content>
+	<tabTrigger>lin</tabTrigger>
+	<scope>source.jade</scope>
+	<description>link()</description>
+</snippet>

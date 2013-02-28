@@ -188,7 +188,17 @@
     "cfd9f37838e22fccad867e8bab10d595": {
         "opened": [
             {
-                "index": 3, 
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/.homesick/repos/dotfiles/.gitignore"
+            }, 
+            {
+                "index": 5, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/dot/test.sh"
+            }, 
+            {
+                "index": 4, 
                 "group": 0, 
                 "filename": "/home/mikk/.homeshick"
             }, 
@@ -198,19 +208,19 @@
                 "filename": "/home/mikk/.homesick/repos/homeshick/utils/fs.sh"
             }, 
             {
-                "index": 2, 
+                "index": 3, 
                 "group": 0, 
-                "filename": "/home/mikk/.zshrc"
+                "filename": "/home/mikk/.bash/aliases"
             }, 
             {
-                "index": 1, 
+                "index": 0, 
                 "group": 0, 
                 "filename": "/home/mikk/.bashrc"
             }, 
             {
-                "index": -1, 
+                "index": 1, 
                 "group": 0, 
-                "filename": "/home/mikk/workspace/dot/test.sh"
+                "filename": "/home/mikk/.zshrc"
             }, 
             {
                 "index": -1, 
@@ -219,11 +229,6 @@
             }
         ], 
         "closed": [
-            {
-                "index": 3, 
-                "group": 0, 
-                "filename": "/home/mikk/.bash/aliases"
-            }, 
             {
                 "index": 3, 
                 "group": 0, 
@@ -476,7 +481,17 @@
     "global": {
         "opened": [
             {
-                "index": 3, 
+                "index": 2, 
+                "group": 0, 
+                "filename": "/home/mikk/.homesick/repos/dotfiles/.gitignore"
+            }, 
+            {
+                "index": 5, 
+                "group": 0, 
+                "filename": "/home/mikk/workspace/dot/test.sh"
+            }, 
+            {
+                "index": 4, 
                 "group": 0, 
                 "filename": "/home/mikk/.homeshick"
             }, 
@@ -486,19 +501,19 @@
                 "filename": "/home/mikk/.homesick/repos/homeshick/utils/fs.sh"
             }, 
             {
-                "index": 2, 
+                "index": 3, 
                 "group": 0, 
-                "filename": "/home/mikk/.zshrc"
+                "filename": "/home/mikk/.bash/aliases"
             }, 
             {
-                "index": 1, 
+                "index": 0, 
                 "group": 0, 
                 "filename": "/home/mikk/.bashrc"
             }, 
             {
-                "index": -1, 
+                "index": 1, 
                 "group": 0, 
-                "filename": "/home/mikk/workspace/dot/test.sh"
+                "filename": "/home/mikk/.zshrc"
             }, 
             {
                 "index": -1, 
@@ -714,19 +729,9 @@
                 "index": -1, 
                 "group": 0, 
                 "filename": "/home/mikk/workspace/bitprovider/public/js/modules/layers/view/layers.js"
-            }, 
-            {
-                "index": -1, 
-                "group": 0, 
-                "filename": "/home/mikk/workspace/bitprovider/node_modules/stylus/lib/nodes/keyframes.js"
             }
         ], 
         "closed": [
-            {
-                "index": 3, 
-                "group": 0, 
-                "filename": "/home/mikk/.bash/aliases"
-            }, 
             {
                 "index": 3, 
                 "group": 0, 
@@ -966,11 +971,6 @@
                 "index": 0, 
                 "group": 0, 
                 "filename": "/home/mikk/workspace/page.js/server.coffee"
-            }, 
-            {
-                "index": 4, 
-                "group": 0, 
-                "filename": "/home/mikk/workspace/page.js/app/application.coffee"
             }
         ]
     }, 
