@@ -7,6 +7,5 @@ fi
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in $(find ~/.bash/ -mindepth 1 -maxdepth 1 -type f) ; do
-  echo $file
   [[ -r $file ]] && source "$file"
 done

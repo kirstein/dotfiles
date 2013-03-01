@@ -30,7 +30,6 @@ alias slt="sublime-text-2"
 # OTHER aliases
 # -------------------------------------------------------------------
 
-alias homesick="$HOME/.homeshick"
 alias cl="clear"
 alias mkdir="mkdir -p"
 alias h="history"
