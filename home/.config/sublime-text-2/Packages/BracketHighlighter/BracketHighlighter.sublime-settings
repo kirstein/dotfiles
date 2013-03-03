@@ -3,7 +3,7 @@
     "quote_enable" : false,
     "curly_enable" : true,
     "round_enable" : false,
-    "square_enable": true,
+    "square_enable": false,
     "angle_enable" : true,
 
     // Higlight tags if tag is selected. angle_enable must be true for tags to work

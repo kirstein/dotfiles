@@ -830,7 +830,6 @@
 			{"key": "vi_action", "operand": "reindent"}
 		]
 	},
-
 	// Single key, combined action-motions
 
 	{ "keys": ["D"], "command": "set_action_motion", "args": {
