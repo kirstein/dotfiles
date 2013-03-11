@@ -1,38 +1,29 @@
-alias awesome="echo you are awesome";
+alias awesome="echo you are awesome"
 
 # -------------------------------------------------------------------
 # Pure awesome
 # -------------------------------------------------------------------
 alias slt="sublime-text-2"
 alias please="sudo"
-
+alias bashrc=". ~/.bashrc; echo 'Bashrc reloaded...'"
 
 # -------------------------------------------------------------------
-# Git aliases
+# System aliases
 # -------------------------------------------------------------------
 
-# alias ga='git add -A'
-# alias gp='git push'
-# alias gl='git log'
-# alias gs='git status'
-# alias gd='git diff'
-# alias gm='git commit -m'
-# alias gma='git commit -am'
-# alias gb='git branch'
-# alias gc='git checkout'
-# alias gpu='git pull'
-# alias gcl='git clone'
-# alias gta='git tag -a -m'
-# alias gf='git reflog'
-
-# alias gh='git hist'
+alias ls='ls -aF --color=always'  # Always add colors and file type extensions
+alias ports="lsof -i -n -P"       # Show ports information
+alias grep='grep --color=auto'    # Always colored grep
 
 # -------------------------------------------------------------------
 # OTHER aliases
 # -------------------------------------------------------------------
 
-alias cl="clear"
-alias mkdir="mkdir -p"
-alias h="history"
-alias j="jobs -p"
-alias ccat="pygmentize -g"
+alias cl="clear"            # Clear
+alias mkdir="mkdir -p"      # Make all dirs
+alias h="history"           # History
+alias j="jobs -p"           # All jobs + progresses
+alias ccat="pygmentize -g"  # Colored cat
+alias bc='bc -l'            # Calculator
+alias pa="ps aux"           # Ps aux
+alias pag="ps aux | grep"   # Ps aux grep

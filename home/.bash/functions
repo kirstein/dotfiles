@@ -9,3 +9,7 @@ function server() {
   chromium-browser  "localhost:$PORT" &
   python -m SimpleHTTPServer $PORT
 }
+
+function ctar() {
+  if [[ -z $1 ]]
+}
