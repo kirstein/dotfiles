@@ -1,0 +1,41 @@
+#!/bin/bash
+
+### Tar file
+function ctar() {
+
+  # Build a file name
+  function __getFileName() {
+    dir="${@%/}"                # Remove trailing slash
+    dir="${dir##*/}"            # Remove folder
+    echo $dir | sed -e's# #_#g' # Replace spaces
+  }
+
+  # Get the real target name
+  function __getTargetName() {
+    ext=".tar.gz"
+    index=0
+    target=$1
+    while true; do
+      # If it exists
+      if [[ -e $PWD/$target$ext ]]; then
+        index=$((index+1))
+        target=$(echo "$target" | sed '$s#[0-9]*$#'$index'#')
+      else
+        echo "$PWD/$target$ext"
+        break
+      fi
+    done
+  }
+
+  # Check if target exists
+  if [[ -z $1 ]] || [[ ! -e $@ ]]; then
+    echo "Target does not exist"
+    return
+  fi
+
+  name=$(__getFileName $@)
+  filename=$(__getTargetName $name)
+
+  tar -zcvf "$filename" "$@"
+  echo -e "\n\nPacked $@ to $filename"
+}
