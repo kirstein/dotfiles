@@ -11,3 +11,8 @@ function server() {
   chromium-browser  "localhost:$PORT" &
   python -m SimpleHTTPServer $PORT
 }
+
+
+function precmd () {
+ z --add "$(pwd -P)"
+}

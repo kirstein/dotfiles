@@ -1,15 +1,14 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.bash/oh-my-zsh
 
 # Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
+# Look in oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="af-magic"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -58,38 +57,10 @@ zstyle ':completion:*' use-cache on
 # .. and then specify the cache file to use (not added to repo: separate file for each machine)
 zstyle ':completion:*' cache-path ~/.zshcache
 
-source $ZSH/oh-my-zsh.sh
-
 # Customize to your needs...
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
-. ~/.z-zsh/z.sh
-function precmd () {
- z --add "$(pwd -P)"
-}
-
-### Git
-alias gd="git diff | sublime-text-2"
-alias ga="git add"
-alias gbd="git branch -D"
-alias gst="git status"
-alias gca="git commit -a -m"
-alias gm="git merge --no-ff"
-alias gpt="git push --tags"
-alias gp="git push"
-alias grh="git reset --hard"
-alias gb="git branch"
-alias gcob="git checkout -b"
-alias gco="git checkout"
-alias gba="git branch -a"
-alias gcp="git cherry-pick"
-alias gl="git log --pretty='format:%Cgreen%h%Creset %an - %s' --graph"
-alias gpom="git pull origin master"
-alias gcd='cd "`git rev-parse --show-toplevel`"'
-
-### Ant
-alias iant='ant -Dproject.qualifier=-SNAPSHOT'
-alias iantBuild='iant clean ; iant build-all-upstream'
+### Load z
+. ~/.bash/z/z.sh
 
 ### Load bashrc
 . ~/.bashrc

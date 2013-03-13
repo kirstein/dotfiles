@@ -27,3 +27,32 @@ alias ccat="pygmentize -g"  # Colored cat
 alias bc='bc -l'            # Calculator
 alias pa="ps aux"           # Ps aux
 alias pag="ps aux | grep"   # Ps aux grep
+
+
+# -------------------------------------------------------------------
+# Git aliases
+# -------------------------------------------------------------------
+alias gd="git diff | sublime-text-2"
+alias ga="git add"
+alias gbd="git branch -D"
+alias gst="git status"
+alias gca="git commit -a -m"
+alias gm="git merge --no-ff"
+alias gpt="git push --tags"
+alias gp="git push"
+alias grh="git reset --hard"
+alias gb="git branch"
+alias gcob="git checkout -b"
+alias gco="git checkout"
+alias gba="git branch -a"
+alias gcp="git cherry-pick"
+alias gl="git log --pretty='format:%Cgreen%h%Creset %an - %s' --graph"
+alias gpom="git pull origin master"
+alias gcd='cd "`git rev-parse --show-toplevel`"'
+
+# -------------------------------------------------------------------
+# Ant aliases
+# -------------------------------------------------------------------
+alias iant='ant -Dproject.qualifier=-SNAPSHOT'
+alias iantBuild='iant clean ; iant build-all-upstream'
+
