@@ -14,6 +14,7 @@ alias bashrc=". ~/.bashrc; echo 'Bashrc reloaded...'"
 alias ls='ls -aF --color=always'  # Always add colors and file type extensions
 alias ports="lsof -i -n -P"       # Show ports information
 alias grep='grep --color=auto'    # Always colored grep
+alias ll='ls -la'
 
 # -------------------------------------------------------------------
 # OTHER aliases

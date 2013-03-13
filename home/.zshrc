@@ -1,3 +1,9 @@
+### Load z
+. ~/.bash/z/z.sh
+
+### Load bashrc
+. ~/.bashrc
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.bash/oh-my-zsh
 
@@ -57,11 +63,4 @@ zstyle ':completion:*' use-cache on
 # .. and then specify the cache file to use (not added to repo: separate file for each machine)
 zstyle ':completion:*' cache-path ~/.zshcache
 
-# Customize to your needs...
-
-### Load z
-. ~/.bash/z/z.sh
-
-### Load bashrc
-. ~/.bashrc
-
+source $ZSH/oh-my-zsh.sh
