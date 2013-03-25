@@ -1,6 +1,6 @@
 ### Source global definitions (if any)
 if [ -f /etc/bashrc ]; then
-  . /etc/bashrc   # --> Read /etc/bashrc, if present.
+  # . /etc/bashrc   # --> Read /etc/bashrc, if present.
 fi
 
 # Load the shell dotfiles, and then some:

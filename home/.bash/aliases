@@ -24,10 +24,10 @@ alias cl="clear"            # Clear
 alias mkdir="mkdir -p"      # Make all dirs
 alias h="history"           # History
 alias j="jobs -p"           # All jobs + progresses
-alias ccat="pygmentize -g"  # Colored cat
 alias bc='bc -l'            # Calculator
 alias pa="ps aux"           # Ps aux
 alias pag="ps aux | grep"   # Ps aux grep
+alias ccat="pygmentize -O style=monokai -f console256"  # Colored cat
 
 
 # -------------------------------------------------------------------

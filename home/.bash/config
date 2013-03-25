@@ -1,2 +1,5 @@
 # Git colors on
 git config --global color.ui true
+
+# Add home bin to path
+PATH=$PATH:$HOME/bin
