@@ -6,15 +6,16 @@ alias awesome="echo you are awesome"
 alias slt="sublime-text-2"
 alias please="sudo"
 alias bashrc=". ~/.bashrc; echo 'Bashrc reloaded...'"
+alias github="chrome \`git remote -v | grep github.com | grep fetch | head -1 | field 2 | sed 's/git:/http:/g'\`"
 
 # -------------------------------------------------------------------
 # System aliases
 # -------------------------------------------------------------------
 
-alias ls='ls -aF --color=always'  # Always add colors and file type extensions
+# alias ls='ls -aF'  # Always add colors and file type extensions
 alias ports="lsof -i -n -P"       # Show ports information
 alias grep='grep --color=auto'    # Always colored grep
-alias ll='ls -la'
+# alias ll='ls -la'
 
 # -------------------------------------------------------------------
 # OTHER aliases
