@@ -3,16 +3,23 @@ alias awesome="echo you are awesome"
 # -------------------------------------------------------------------
 # Pure awesome
 # -------------------------------------------------------------------
+alias mou=""
 alias slt="sublime-text-2"
 alias please="sudo"
 alias bashrc=". ~/.bashrc; echo 'Bashrc reloaded...'"
-alias github="chrome \`git remote -v | grep github.com | grep fetch | head -1 | field 2 | sed 's/git:/http:/g'\`"
+alias github="chromium-browser \`git remote -v | grep github.com | grep fetch | head -1 | field 2 | sed 's/git:/http:/g'\`"
+
+# -------------------------------------------------------------------
+# osx only
+# -------------------------------------------------------------------
+
+alias chromium-browser="open -a Google\ Chrome\ Canary.app"
 
 # -------------------------------------------------------------------
 # System aliases
 # -------------------------------------------------------------------
 
-# alias ls='ls -aF'  # Always add colors and file type extensions
+# alias ls='ls -aF'               # Always add colors and file type extensions
 alias ports="lsof -i -n -P"       # Show ports information
 alias grep='grep --color=auto'    # Always colored grep
 # alias ll='ls -la'

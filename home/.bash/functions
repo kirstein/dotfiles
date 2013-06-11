@@ -8,7 +8,7 @@ function server() {
     PORT="$1"
   fi
 
-  chromium-browser  "localhost:$PORT" &
+  chromium-browser  "http://localhost:$PORT" &
   python -m SimpleHTTPServer $PORT
 }
 
