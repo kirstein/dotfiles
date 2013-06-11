@@ -3,7 +3,6 @@ alias awesome="echo you are awesome"
 # -------------------------------------------------------------------
 # Pure awesome
 # -------------------------------------------------------------------
-alias mou=""
 alias slt="sublime-text-2"
 alias please="sudo"
 alias bashrc=". ~/.bashrc; echo 'Bashrc reloaded...'"
@@ -36,7 +35,6 @@ alias bc='bc -l'            # Calculator
 alias pa="ps aux"           # Ps aux
 alias pag="ps aux | grep"   # Ps aux grep
 alias ccat="pygmentize -O style=monokai -f console256"  # Colored cat
-
 
 # -------------------------------------------------------------------
 # Git aliases

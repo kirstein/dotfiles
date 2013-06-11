@@ -16,3 +16,12 @@ function server() {
 function precmd () {
  z --add "$(pwd -P)"
 }
+
+# Compute gzip size of file
+function gsize() {
+  if [[ -z $1 ]]; then
+    exit 1
+  fi
+
+  gzip -c "$1" | wc -c
+}
