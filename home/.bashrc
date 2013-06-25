@@ -3,6 +3,10 @@ if [ -f /etc/bashrc ]; then
   # . /etc/bashrc   # --> Read /etc/bashrc, if present.
 fi
 
+export HISTCONTROL=ignoreboth
+# After each command, save and reload history
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
