@@ -2,26 +2,39 @@
 
 ### Helper functions
 function server() {
-  if [[ -z $1 ]]; then
-    PORT=8000
-  else
-    PORT="$1"
-  fi
+if [[ -z $1 ]]; then
+  PORT=8000
+else
+  PORT="$1"
+fi
 
-  chromium-browser  "http://localhost:$PORT" &
-  python -m SimpleHTTPServer $PORT
+chromium-browser  "http://localhost:$PORT" &
+python -m SimpleHTTPServer $PORT
 }
 
 
 function precmd () {
- z --add "$(pwd -P)"
+z --add "$(pwd -P)"
 }
 
 # Compute gzip size of file
 function gsize() {
-  if [[ -z $1 ]]; then
-    exit 1
-  fi
+if [[ -z $1 ]]; then
+  exit 1
+fi
 
-  gzip -c "$1" | wc -c
+gzip -c "$1" | wc -c
+}
+
+# A bash function to display a growl notification using iTerm's magic
+# escape sequence. This version will work under screen.
+growl() {
+  local msg="\\e]9;\n\n${*}\\007"
+  case $TERM in
+    screen*)
+      echo -ne '\eP'${msg}'\e\\' ;;
+    *)
+      echo -ne ${msg} ;;
+  esac
+  return
 }
