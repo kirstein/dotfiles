@@ -64,3 +64,5 @@ zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zshcache
 
 source $ZSH/oh-my-zsh.sh
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
