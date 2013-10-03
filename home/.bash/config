@@ -3,5 +3,3 @@ git config --global color.ui true
 
 # Add home bin to path
 PATH=/usr/local/bin:$HOME/bin:/usr/local/share/npm/bin:$PATH
-export PIP2EVAL_TMP_FILE_PATH=/tmp/shms
-
