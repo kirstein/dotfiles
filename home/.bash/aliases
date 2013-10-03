@@ -3,6 +3,7 @@ alias awesome="echo you are awesome"
 # -------------------------------------------------------------------
 # Pure awesome
 # -------------------------------------------------------------------
+alias mvim="mvim --remote-tab-silent"
 alias slt="sublime-text-2"
 alias please="sudo"
 alias bashrc=". ~/.bashrc; echo 'Bashrc reloaded...'"
