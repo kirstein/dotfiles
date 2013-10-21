@@ -55,3 +55,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/Users/kirstein/.rvm/gems/ruby-2.0.0-p247/bin:/Users/kirstein/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/kirstein/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/kirstein/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/Users/kirstein/.rvm/bin:/Users/kirstein/.rvm/bin:/Users/kirstein/.rvm/bin:/Users/kirstein/.rvm/bin:/Users/kirstein/.rvm/bin
+
+[ -s "/Users/kirstein/.scm_breeze/scm_breeze.sh" ] && source "/Users/kirstein/.scm_breeze/scm_breeze.sh"

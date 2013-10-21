@@ -15,3 +15,5 @@ for file in $(find ~/.bash/ -mindepth 1 -maxdepth 1 -type f) ; do
 done
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+[ -s "/Users/kirstein/.scm_breeze/scm_breeze.sh" ] && source "/Users/kirstein/.scm_breeze/scm_breeze.sh"
