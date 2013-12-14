@@ -11,7 +11,9 @@ ZSH=$HOME/.bash/oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="miloshadzic"
+#
+# Using custom theme! Will source it manually!
+#ZSH_THEME="lambda"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -50,3 +52,5 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/Users/kirstein/.rvm/gems/ruby-2.0.0-p247/bin:/Users/kirstein/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/kirstein/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/kirstein/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/Users/kirstein/.rvm/bin:/Users/kirstein/.rvm/bin:/Users/kirstein/.rvm/bin:/Users/kirstein/.rvm/bin:/Users/kirstein/.rvm/bin
 
 [ -s "/Users/kirstein/.scm_breeze/scm_breeze.sh" ] && source "/Users/kirstein/.scm_breeze/scm_breeze.sh"
+
+source ~/.bash/custom-lambda.zsh-theme
