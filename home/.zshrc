@@ -1,6 +1,9 @@
 ### Load z
 . ~/.bash/z/z.sh
 
+### Load k
+source ~/.bash/k/k.sh
+
 ### Load bashrc
 . ~/.bashrc
 
