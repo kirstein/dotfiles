@@ -4,3 +4,6 @@
 [submodule "home/.bash/oh-my-zsh"]
 	path = home/.bash/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "home/.bash/k"]
+	path = home/.bash/k
+	url = git@github.com:supercrabtree/k.git
