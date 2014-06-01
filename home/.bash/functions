@@ -12,11 +12,6 @@ chromium-browser  "http://localhost:$PORT" &
 python -m SimpleHTTPServer $PORT
 }
 
-
-function precmd () {
-z --add "$(pwd -P)"
-}
-
 # Compute gzip size of file
 function gsize() {
 if [[ -z $1 ]]; then
