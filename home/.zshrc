@@ -44,7 +44,7 @@ ZSH=$HOME/.bash/oh-my-zsh
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras bower brew npm last-working-dir z)
+plugins=(git git-extras brew npm last-working-dir z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -55,5 +55,3 @@ export LANG="en_US.UTF-8"
 source ~/.bash/custom-lambda.zsh-theme
 
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
-
-eval "$(rbenv init -)"

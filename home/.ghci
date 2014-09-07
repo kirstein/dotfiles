@@ -1,1 +1,5 @@
+import Text.Regex.Posix
+import Data.Char
+import Data.List
+
 :set prompt "ghci> "

@@ -14,4 +14,3 @@ for file in $(find ~/.bash/ -mindepth 1 -maxdepth 1 -type f) ; do
   [[ -r $file ]] && source "$file"
 done
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
