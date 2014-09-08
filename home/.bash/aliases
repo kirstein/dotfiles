@@ -12,6 +12,7 @@ alias tmux="tmux -2 -u"
 alias please="sudo"
 alias bashrc=". ~/.bashrc; echo 'Bashrc reloaded...'"
 alias github="chromium-browser \`git remote -v | grep github.com | grep fetch | head -1 | field 2 | sed 's/git:/http:/g'\`"
+alias fuck='sudo $(fc -ln -1)' 
 
 # -------------------------------------------------------------------
 # osx only
