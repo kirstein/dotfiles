@@ -33,6 +33,8 @@ alias grep='grep --color=auto'    # Always colored grep
 # OTHER aliases
 # -------------------------------------------------------------------
 
+# Display the battery information
+alias battery="~/.bash/battery/battery"
 alias cl="clear"            # Clear
 alias mkdir="mkdir -p"      # Make all dirs
 alias h="history"           # History

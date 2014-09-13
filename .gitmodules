@@ -4,3 +4,6 @@
 [submodule "home/.bash/k"]
 	path = home/.bash/k
 	url = git@github.com:supercrabtree/k.git
+[submodule "home/.bash/battery"]
+	path = home/.bash/battery
+	url = git@github.com:Goles/Battery.git
