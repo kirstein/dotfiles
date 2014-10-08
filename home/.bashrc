@@ -9,8 +9,7 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
+# * ~/.extra can be used for other settings you donât want to commit.
 for file in $(find ~/.bash/ -mindepth 1 -maxdepth 1 -type f) ; do
   [[ -r $file ]] && source "$file"
 done
-

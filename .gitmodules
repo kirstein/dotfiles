@@ -7,3 +7,6 @@
 [submodule "home/.bash/battery"]
 	path = home/.bash/battery
 	url = git@github.com:Goles/Battery.git
+[submodule "home/yeoman-zsh"]
+	path = home/yeoman-zsh
+	url = git@github.com:edouard-lopez/yeoman-zsh-plugin.git
