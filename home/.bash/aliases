@@ -49,9 +49,3 @@ alias ccat="pygmentize -O style=monokai -f console256"  # Colored cat
 # -------------------------------------------------------------------
 alias iant='ant -Dproject.qualifier=-SNAPSHOT'
 alias iantBuild='iant clean ; iant build-all-upstream'
-
-# -------------------------------------------------------------------
-# Go
-# -------------------------------------------------------------------
-alias go='export GOPATH=`pwd`;go'
-
