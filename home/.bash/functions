@@ -2,23 +2,23 @@
 
 ### Helper functions
 function server() {
-if [[ -z $1 ]]; then
-  PORT=8000
-else
-  PORT="$1"
-fi
+  if [[ -z $1 ]]; then
+    PORT=8000
+  else
+    PORT="$1"
+  fi
 
-chromium-browser  "http://localhost:$PORT" &
-python -m SimpleHTTPServer $PORT
+  chromium-browser  "http://localhost:$PORT" &
+  python -m SimpleHTTPServer $PORT
 }
 
 # Compute gzip size of file
 function gsize() {
-if [[ -z $1 ]]; then
-  exit 1
-fi
+  if [[ -z $1 ]]; then
+    exit 1
+  fi
 
-gzip -c "$1" | wc -c
+  gzip -c "$1" | wc -c
 }
 
 # A bash function to display a growl notification using iTerm's magic
@@ -51,3 +51,8 @@ fancy-ctrl-z () {
 
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
+
+# Create a directory and cd into it
+mkdircd() {
+  mkdir "$1" && cd $_
+}
