@@ -1,4 +1,5 @@
 alias awesome="echo you are awesome"
+
 # -------------------------------------------------------------------
 # Noglob
 # -------------------------------------------------------------------
@@ -48,4 +49,4 @@ alias ccat="pygmentize -O style=monokai -f console256"  # Colored cat
 # Ant aliases
 # -------------------------------------------------------------------
 alias iant='ant -Dproject.qualifier=-SNAPSHOT'
-alias iantBuild='iant clean ; iant build-all-upstream'
+
