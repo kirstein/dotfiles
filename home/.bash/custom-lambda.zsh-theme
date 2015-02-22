@@ -2,7 +2,7 @@
 if [ $UID -eq 0 ]; then CARETCOLOR="red"; else CARETCOLOR="cyan"; fi
 
 PROMPT='%{$fg[$CARETCOLOR]%}λ%{$reset_color%} ${${PWD/#%$HOME/~}/#$HOME\//~/} %{$fg[$CARETCOLOR]%}»%{$reset_color%} '
-RPROMPT='$(git_prompt_info)%{$reset_color%}'
+RPROMPT='$(vi_mode_prompt_info) $(git_prompt_info)%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}!%{$reset_color%}"
 
