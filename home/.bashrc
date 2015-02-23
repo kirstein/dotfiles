@@ -3,9 +3,6 @@ if [ -f /etc/bashrc ]; then
   # . /etc/bashrc   # --> Read /etc/bashrc, if present.
 fi
 
-# Vi mode
-set -o vi
-
 export HISTCONTROL=ignoreboth
 # After each command, save and reload history
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
