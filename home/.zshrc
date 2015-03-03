@@ -9,8 +9,7 @@ ZSH=$HOME/.bash/oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# Optionally, if you set this to "random", it'll load a random theme each # time that oh-my-zsh is loaded.
 #
 # Using custom theme! Will source it manually!
 #ZSH_THEME="lambda"
@@ -45,6 +44,8 @@ ZSH=$HOME/.bash/oh-my-zsh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git git-extras brew npm last-working-dir z yeoman vi-mode)
+bindkey -v
+bindkey '^R' history-incremental-search-backward
 
 source $ZSH/oh-my-zsh.sh
 
