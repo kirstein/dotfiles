@@ -49,6 +49,10 @@ bindkey '^R' history-incremental-search-backward
 
 source $ZSH/oh-my-zsh.sh
 
+# Fuck off perl
+LC_CTYPE=en_US.UTF-8
+LC_ALL=en_US.UTF-8
+
 # Customize to your needs...
 export PATH=$PATH:/Library/Haskell/bin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/Users/kirstein/.rbenv/bin:/Users/kirstein/.cabal/bin
 export LANG="en_US.UTF-8"

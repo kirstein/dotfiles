@@ -13,7 +13,7 @@ alias tmux="tmux -2 -u"
 alias please="sudo"
 alias bashrc=". ~/.bashrc; echo 'Bashrc reloaded...'"
 alias github="chromium-browser \`git remote -v | grep github.com | grep fetch | head -1 | field 2 | sed 's/git:/http:/g'\`"
-alias fuck='sudo $(fc -ln -1)' 
+alias fuck='eval $(thefuck $(fc -ln -1))'
 
 # -------------------------------------------------------------------
 # osx only
@@ -43,7 +43,6 @@ alias j="jobs -p"           # All jobs + progresses
 alias bc='bc -l'            # Calculator
 alias pa="ps aux"           # Ps aux
 alias pag="ps aux | grep"   # Ps aux grep
-alias ccat="pygmentize -O style=monokai -f console256"  # Colored cat
 
 # -------------------------------------------------------------------
 # Ant aliases
