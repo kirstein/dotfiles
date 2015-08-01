@@ -49,3 +49,5 @@ alias pag="ps aux | grep"   # Ps aux grep
 # -------------------------------------------------------------------
 alias iant='ant -Dproject.qualifier=-SNAPSHOT'
 
+alias rake_db_migrate='rake db:migrate && rake db:migrate RAILS_ENV=test'
+alias wl='wunderline'

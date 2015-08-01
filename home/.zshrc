@@ -43,7 +43,7 @@ ZSH=$HOME/.bash/oh-my-zsh
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras brew npm last-working-dir z yeoman vi-mode)
+plugins=(git git-extras brew npm last-working-dir z yeoman vi-mode rails)
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
@@ -68,3 +68,6 @@ source ~/.bash/custom-lambda.zsh-theme
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 source /usr/local/opt/nvm/nvm.sh
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
