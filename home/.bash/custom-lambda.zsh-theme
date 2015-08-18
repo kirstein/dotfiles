@@ -4,7 +4,7 @@ autoload -U add-zsh-hook
 add-zsh-hook precmd _update_path
 
 function _update_path() {
-  _path=$(findroot)
+  _path=$(find-project-root)
 }
 
 function _get_path() {
