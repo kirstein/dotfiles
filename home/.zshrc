@@ -54,12 +54,19 @@ LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 
 # Customize to your needs...
-export PATH=$PATH:/Library/Haskell/bin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/Users/kirstein/.rbenv/bin:/Users/kirstein/.cabal/bin
+export PATH=$PATH:/Library/Haskell/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/Users/kirstein/.rbenv/bin:/Users/kirstein/.cabal/bin
 export LANG="en_US.UTF-8"
 
 # Go path settings
 export PATH=$PATH:$GOPATH/bin
 export GOPATH=$HOME/go
+
+# Theme depends on find-project-root
+# If find-project-root does not exist then npm install it
+find-project-root >/dev/null 2>&1 || { 
+  echo "find-project-root is missing. Installing it."
+  npm install -g find-project-root 
+}
 
 # Custom lambda template
 source ~/.bash/custom-lambda.zsh-theme
