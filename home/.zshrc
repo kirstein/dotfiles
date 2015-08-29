@@ -63,10 +63,11 @@ export GOPATH=$HOME/go
 
 # Theme depends on find-project-root
 # If find-project-root does not exist then npm install it
-find-project-root >/dev/null 2>&1 || { 
+hash find-project-root &> /dev/null
+if [ $? -eq 1 ]; then
   echo "find-project-root is missing. Installing it."
   npm install -g find-project-root 
-}
+fi
 
 # Custom lambda template
 source ~/.bash/custom-lambda.zsh-theme
@@ -75,6 +76,12 @@ source ~/.bash/custom-lambda.zsh-theme
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 source /usr/local/opt/nvm/nvm.sh
+
+function chpwd() {
+  if [ -r $PWD/.nvmrc ]; then
+    nvm use `cat $PWD/.nvmrc`
+  fi
+}
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
