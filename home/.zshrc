@@ -60,10 +60,6 @@ export GOPATH=$HOME/go
 
 source ~/.nvm/nvm.sh
 
-# Theme depends on find-project-root
-# If find-project-root does not exist then npm install it
-find-project-root >/dev/null 2>&1 || { echo >&2 npm i -g find-project-root }
-
 # Custom lambda template
 source ~/.bash/custom-lambda.zsh-theme
 
@@ -77,3 +73,4 @@ function chpwd() {
 
 eval "$(docker-machine env default)"
 export PATH="/usr/local/sbin:$PATH"
+export EDITOR="vim"

@@ -4,7 +4,12 @@ autoload -U add-zsh-hook
 add-zsh-hook precmd _update_path
 
 function _update_path() {
-  _path=$(find-project-root)
+  git rev-parse --show-toplevel &> /dev/null
+  if [[ $? != 0 ]]; then
+    _path=""
+  else
+    _path=$(git rev-parse --show-toplevel)
+  fi
 }
 
 function _get_path() {
