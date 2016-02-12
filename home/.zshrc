@@ -1,6 +1,3 @@
-### Load k
-source ~/.bash/k/k.sh
-
 ### Load bashrc
 . ~/.bashrc
 
@@ -61,21 +58,14 @@ export LANG="en_US.UTF-8"
 export PATH=$PATH:$GOPATH/bin
 export GOPATH=$HOME/go
 
+source ~/.nvm/nvm.sh
+
 # Theme depends on find-project-root
 # If find-project-root does not exist then npm install it
-hash find-project-root &> /dev/null
-if [ $? -eq 1 ]; then
-  echo "find-project-root is missing. Installing it."
-  npm install -g find-project-root 
-fi
+find-project-root >/dev/null 2>&1 || { echo >&2 npm i -g find-project-root }
 
 # Custom lambda template
 source ~/.bash/custom-lambda.zsh-theme
-
-[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-source /usr/local/opt/nvm/nvm.sh
 
 function chpwd() {
   if [ -r $PWD/.nvmrc ]; then
@@ -83,5 +73,7 @@ function chpwd() {
   fi
 }
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+[ -s "/Users/mikk/.scm_breeze/scm_breeze.sh" ] && source "/Users/mikk/.scm_breeze/scm_breeze.sh"
+
+eval "$(docker-machine env default)"
+export PATH="/usr/local/sbin:$PATH"
