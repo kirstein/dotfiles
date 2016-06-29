@@ -27,10 +27,10 @@ ZSH=$HOME/.bash/oh-my-zsh
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want to disable command autocorrection
- DISABLE_CORRECTION="true"
+DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
- COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
@@ -40,7 +40,7 @@ ZSH=$HOME/.bash/oh-my-zsh
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras brew npm last-working-dir z yeoman vi-mode rails)
+plugins=(git git-extras last-working-dir z vi-mode)
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
@@ -58,19 +58,26 @@ export LANG="en_US.UTF-8"
 export PATH=$PATH:$GOPATH/bin
 export GOPATH=$HOME/go
 
-source ~/.nvm/nvm.sh
+. "$(brew --prefix nvm)/nvm.sh"
 
 # Custom lambda template
 source ~/.bash/custom-lambda.zsh-theme
 
+# Automatically switch between node modules
 function chpwd() {
   if [ -r $PWD/.nvmrc ]; then
     nvm use `cat $PWD/.nvmrc`
   fi
 }
 
-[ -s "/Users/mikk/.scm_breeze/scm_breeze.sh" ] && source "/Users/mikk/.scm_breeze/scm_breeze.sh"
-
-eval "$(docker-machine env default)"
 export PATH="/usr/local/sbin:$PATH"
 export EDITOR="vim"
+export NPM_TOKEN=$(sed -n 's/.*authToken=//p' ~/.npmrc)
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# export PATH="$HOME/.rbenv/bin:$PATH"
+
+[ -s "/Users/kirstein/.scm_breeze/scm_breeze.sh" ] && source "/Users/kirstein/.scm_breeze/scm_breeze.sh"
+alias wh=whaley
+eval "$(docker-machine env default)"
+[ -s "/Users/kirstein/workspace/github/testlio/testlio-toolbox/whaley.sh" ] && source "/Users/kirstein/workspace/github/testlio/testlio-toolbox/whaley.sh"
