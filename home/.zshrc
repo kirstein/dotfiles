@@ -40,7 +40,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras last-working-dir z vi-mode)
+plugins=(git-extras last-working-dir z vi-mode)
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
@@ -58,7 +58,8 @@ export LANG="en_US.UTF-8"
 export PATH=$PATH:$GOPATH/bin
 export GOPATH=$HOME/go
 
-. "$(brew --prefix nvm)/nvm.sh"
+export NVM_DIR="$HOME/.nvm"
+. "$NVM_DIR/nvm.sh"
 
 # Custom lambda template
 source ~/.bash/custom-lambda.zsh-theme
@@ -78,6 +79,3 @@ export NPM_TOKEN=$(sed -n 's/.*authToken=//p' ~/.npmrc)
 # export PATH="$HOME/.rbenv/bin:$PATH"
 
 [ -s "/Users/kirstein/.scm_breeze/scm_breeze.sh" ] && source "/Users/kirstein/.scm_breeze/scm_breeze.sh"
-alias wh=whaley
-eval "$(docker-machine env default)"
-[ -s "/Users/kirstein/workspace/github/testlio/testlio-toolbox/whaley.sh" ] && source "/Users/kirstein/workspace/github/testlio/testlio-toolbox/whaley.sh"
