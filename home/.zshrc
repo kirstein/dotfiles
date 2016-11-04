@@ -59,7 +59,7 @@ export PATH=$PATH:$GOPATH/bin
 export GOPATH=$HOME/go
 
 export NVM_DIR="$HOME/.nvm"
-. "$NVM_DIR/nvm.sh"
+. "/usr/local/opt/nvm/nvm.sh"
 
 # Custom lambda template
 source ~/.bash/custom-lambda.zsh-theme
@@ -73,9 +73,7 @@ function chpwd() {
 
 export PATH="/usr/local/sbin:$PATH"
 export EDITOR="vim"
-export NPM_TOKEN=$(sed -n 's/.*authToken=//p' ~/.npmrc)
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-# export PATH="$HOME/.rbenv/bin:$PATH"
+export NPM_TOKEN=$(sed -n 's/.*authToken=//p' ~/.npmrc)
 
 [ -s "/Users/kirstein/.scm_breeze/scm_breeze.sh" ] && source "/Users/kirstein/.scm_breeze/scm_breeze.sh"

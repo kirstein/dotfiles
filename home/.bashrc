@@ -1,7 +1,4 @@
 ### Source global definitions (if any)
-if [ -f /etc/bashrc ]; then
-  # source /etc/bashrc   # --> Read /etc/bashrc, if present.
-fi
 
 export HISTCONTROL=ignoreboth
 # After each command, save and reload history
@@ -16,3 +13,4 @@ export LC_ALL=en_US.UTF-8
 for file in $(find ~/.bash/ -mindepth 1 -maxdepth 1 -type f) ; do
   [[ -r $file ]] && source "$file"
 done
+
