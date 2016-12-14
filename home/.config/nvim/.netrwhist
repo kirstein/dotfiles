@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/kirstein/workspace/starship/server/templates/monitoring'
+let g:netrw_dirhist_2='/Users/kirstein/.config/nvim'
+let g:netrw_dirhist_3='/Users/kirstein/workspace/starship/server-tools/packer-starship-server-build-base'
