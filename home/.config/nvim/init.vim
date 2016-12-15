@@ -27,9 +27,11 @@ Plug 'tpope/vim-projectionist'
 Plug 'dbakker/vim-projectroot'
 Plug 'tpope/vim-haml'
 Plug 'rizzatti/dash.vim'
-
+Plug 'airblade/vim-gitgutter'
 " Bundle deoplete {{{
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+let g:deoplete#enable_refresh_always = 1
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " Plug ternjs{{{
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 " Use deoplete.
@@ -92,7 +94,11 @@ map /k <Plug>(easymotion-k)
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
 Plug 'moll/vim-node'
+" Gutentags {{{
 Plug 'ludovicchabant/vim-gutentags'
+set tags=./tags;,tags;
+let g:gutentags_exclude = ['*.min', 'node_modules']
+" }}}
 "Plug 'edsono/vim-matchit'
 " Bundle: Ultisnips {{{
 Plug 'SirVer/ultisnips' |  Plug 'kirstein/vim-snippets'
@@ -223,7 +229,6 @@ let g:gist_post_private = 1
 let g:gist_show_privates = 1
 " }}}
 
-
 " Statusline {{{
 "statusline setup
 set statusline =%#identifier#
@@ -323,14 +328,12 @@ nnoremap <C-p> "+gP
 vnoremap <C-p> "+gP
 " }}}
 " Tags {{{
-set tags=./tags;,tags;
 " let g:easytags_auto_update = 1
 
 " autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
 " autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 " autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
-let g:gutentags_exclude = ['*.min', 'node_modules']
 nmap <F4> :Tagbar<CR>
 " }}}
 " Folding {{{
@@ -519,6 +522,7 @@ set hlsearch
 
 " Makes search act like search in modern browsers
 set incsearch
+set inccommand=split
 
 " Be smart when using tabs ;)
 set smarttab
@@ -570,7 +574,7 @@ autocmd FileType ruby,python,javascript,coffee,vim autocmd BufWritePre <buffer> 
 " Reload vimrc config each time its saved {{{
 augroup myvimrc
     au!
-    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc,~/.config/nvim/init.vim so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
 " }}}
 " Replace highlight line when insert and vice versa {{{
