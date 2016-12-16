@@ -5,10 +5,17 @@ let mapleader = ","
 let g:mapleader = ","
 " }}}
 " Plug install {{{
-let plug_autoinstall = 0
-let plug_location = expand('~/.local/share/nvim/site/autoload/plug.vim')
-if !filereadable(plug_location)
-  call system('curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://github.com/junegunn/vim-plug/raw/master/plug.vim
+
+	function! AuPlugged()
+		exe ':PlugInstall'
+		echom 'Installing plugins... **Restart Vim to load them!**'
+	endfunction
+	augroup AuPlugged
+		autocmd!
+		autocmd VimEnter * call AuPlugged()
+	augroup END
 endif
 " }}}
 call plug#begin('~/.local/share/nvim/plugged')
@@ -22,7 +29,20 @@ Plug 'kylef/apiblueprint.vim'
 Plug 'avakhov/vim-yaml'
 Plug 'duggiefresh/vim-easydir'
 Plug 'kirstein/vim-execute-ft'
+" Bundle neotags {{{
+" Bundle tagbar {{{
 Plug 'majutsushi/tagbar'
+nmap <F4> :Tagbar<CR>
+let g:tagbar_autofocus = 1
+let g:tagbar_autoclose = 1
+
+" Tweaks apparance.
+let g:tagbar_width = 60
+let g:tagbar_compact = 1
+let g:tagbar_indent = 4
+let g:tagbar_iconchars = [' ', ' ']
+nnoremap <leader><F4> :Tagbar<CR>/
+" }}}
 Plug 'tpope/vim-projectionist'
 Plug 'dbakker/vim-projectroot'
 Plug 'tpope/vim-haml'
@@ -32,11 +52,14 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_refresh_always = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
 " Plug ternjs{{{
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern && npm install -g jsctags' }
 " Use deoplete.
 let g:tern_request_timeout = 1
 let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
+let g:tern#arguments = ["--persistent"]
+autocmd CompleteDone * pclose
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
 " }}}
@@ -98,6 +121,7 @@ Plug 'moll/vim-node'
 Plug 'ludovicchabant/vim-gutentags'
 set tags=./tags;,tags;
 let g:gutentags_exclude = ['*.min', 'node_modules']
+let g:gutentags_ctags_executable_javascript = 'jsctags'
 " }}}
 "Plug 'edsono/vim-matchit'
 " Bundle: Ultisnips {{{
@@ -128,13 +152,6 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 Plug 'mxw/vim-jsx'
-" }}}
-" Automatically install bundles {{{
-if plug_autoinstall
-  echo "Installing bundles..."
-  echo ""
-  :PlugInstall
-endif
 " }}}
 call plug#end()
 
@@ -334,7 +351,6 @@ vnoremap <C-p> "+gP
 " autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 " autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
-nmap <F4> :Tagbar<CR>
 " }}}
 " Folding {{{
 set modelines=1
