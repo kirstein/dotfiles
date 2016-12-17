@@ -32,7 +32,7 @@ Plug 'kirstein/vim-execute-ft'
 " Bundle neotags {{{
 " Bundle tagbar {{{
 Plug 'majutsushi/tagbar'
-nmap <F4> :Tagbar<CR>
+nmap <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 
@@ -41,7 +41,7 @@ let g:tagbar_width = 60
 let g:tagbar_compact = 1
 let g:tagbar_indent = 4
 let g:tagbar_iconchars = [' ', ' ']
-nnoremap <leader><F4> :Tagbar<CR>/
+nnoremap <leader><F4> :TagbarToggle<CR>/
 " }}}
 Plug 'tpope/vim-projectionist'
 Plug 'dbakker/vim-projectroot'
@@ -121,7 +121,8 @@ Plug 'moll/vim-node'
 Plug 'ludovicchabant/vim-gutentags'
 set tags=./tags;,tags;
 let g:gutentags_exclude = ['*.min', 'node_modules']
-let g:gutentags_ctags_executable_javascript = 'jsctags'
+" let g:gutentags_ctags_executable_javascript = '~/.config/nvim/scripts/jsctags.sh'
+" let g:gutentags_trace=1
 " }}}
 "Plug 'edsono/vim-matchit'
 " Bundle: Ultisnips {{{
@@ -154,6 +155,7 @@ Plug 'xolox/vim-notes'
 Plug 'mxw/vim-jsx'
 " }}}
 call plug#end()
+" }}}
 
 filetype plugin indent on
 

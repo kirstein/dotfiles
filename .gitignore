@@ -4,3 +4,6 @@ home/.config/sublime-text-2/Backup/
 home/.config/sublime-text-2/Packages/User/FileHistory.json
 home/.config/sublime-text-2/Packages/User/ChangeList.sublime-settings
 
+.netrwhist
+tags
+tags.log

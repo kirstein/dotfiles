@@ -8,7 +8,7 @@ alias bower='noglob bower'
 # -------------------------------------------------------------------
 # Pure awesome
 # -------------------------------------------------------------------
-alias mvim="mvim --remote-tab-silent"
+alias vim="nvim"
 alias tmux="tmux -2 -u"
 alias please="sudo"
 alias bashrc=". ~/.bashrc; . ~/.zshrc; echo 'Bashrc reloaded...'"
