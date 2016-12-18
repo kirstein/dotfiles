@@ -6,16 +6,15 @@ let g:mapleader = ","
 " }}}
 " Plug install {{{
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://github.com/junegunn/vim-plug/raw/master/plug.vim
-
-	function! AuPlugged()
-		exe ':PlugInstall'
-		echom 'Installing plugins... **Restart Vim to load them!**'
-	endfunction
-	augroup AuPlugged
-		autocmd!
-		autocmd VimEnter * call AuPlugged()
-	augroup END
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://github.com/junegunn/vim-plug/raw/master/plug.vim
+  function! AuPlugged()
+    exe ':PlugInstall'
+    echom 'Installing plugins... **Restart Vim to load them!**'
+  endfunction
+  augroup AuPlugged
+    autocmd!
+    autocmd VimEnter * call AuPlugged()
+  augroup END
 endif
 " }}}
 call plug#begin('~/.local/share/nvim/plugged')
@@ -50,7 +49,6 @@ Plug 'rizzatti/dash.vim'
 Plug 'airblade/vim-gitgutter'
 " Bundle deoplete {{{
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-let g:deoplete#enable_refresh_always = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
 " Plug ternjs{{{
@@ -61,7 +59,9 @@ let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on
 let g:tern#arguments = ["--persistent"]
 autocmd CompleteDone * pclose
 " Use deoplete.
+let g:deoplete#enable_refresh_always = 1
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#file#enable_buffer_path = 1
 " }}}
 " }}}
 Plug 'tpope/vim-markdown'
@@ -161,10 +161,10 @@ filetype plugin indent on
 
 " Testing helpers {{{
 let g:execute_ft_commands = { 
-  \'javascript': { 'all': 'Dispatch npm test', 'single': 'Dispatch npm test -- {file}' },
-  \'ruby': { 'all': 'Rake spec test', 'single': 'Rake spec SPEC={file}' },
-  \'php': { 'all': 'Dispatch composer run test', 'single': 'Dispatch composer run test -- {file}' }
-\}
+      \'javascript': { 'all': 'Dispatch npm test', 'single': 'Dispatch npm test -- {file}' },
+      \'ruby': { 'all': 'Rake spec test', 'single': 'Rake spec SPEC={file}' },
+      \'php': { 'all': 'Dispatch composer run test', 'single': 'Dispatch composer run test -- {file}' }
+      \}
 
 map <silent> \\ :call ExecuteByFtLast()<CR>
 map <silent> \a :call ExecuteByFT("all")<CR>
@@ -302,25 +302,25 @@ autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
 "return '[mixed-indenting]' if spaces and tabs are used to indent
 "return an empty string if everything is fine
 function! StatuslineTabWarning()
-    if !exists("b:statusline_tab_warning")
-        let b:statusline_tab_warning = ''
+  if !exists("b:statusline_tab_warning")
+    let b:statusline_tab_warning = ''
 
-        if !&modifiable
-            return b:statusline_tab_warning
-        endif
-
-        let tabs = search('^\t', 'nw') != 0
-
-        "find spaces that arent used as alignment in the first indent column
-        let spaces = search('^ \{' . &ts . ',}[^\t]', 'nw') != 0
-
-        if tabs && spaces
-            let b:statusline_tab_warning =  '[mixed-indenting]'
-        elseif (spaces && !&et) || (tabs && &et)
-            let b:statusline_tab_warning = '[&et]'
-        endif
+    if !&modifiable
+      return b:statusline_tab_warning
     endif
-    return b:statusline_tab_warning
+
+    let tabs = search('^\t', 'nw') != 0
+
+    "find spaces that arent used as alignment in the first indent column
+    let spaces = search('^ \{' . &ts . ',}[^\t]', 'nw') != 0
+
+    if tabs && spaces
+      let b:statusline_tab_warning =  '[mixed-indenting]'
+    elseif (spaces && !&et) || (tabs && &et)
+      let b:statusline_tab_warning = '[&et]'
+    endif
+  endif
+  return b:statusline_tab_warning
 endfunction
 " }}}
 " Directory assigning {{{
@@ -586,13 +586,13 @@ highlight SpecialKey guifg=#4a4a59
 " Display too long lines {{{
 autocmd FileType ruby,python,javascript,coffee,vim autocmd BufWritePre <buffer> match ErrorMsg '\%>100v.\+'
 " }}}
-" " Remove trailing whitespaces when dealing with certain languages  {{{
-" autocmd FileType ruby,python,javascript,coffee,markdown autocmd BufWritePre <buffer> :%s/\($\n\s*\)\+\%$//e
+" Remove trailing whitespaces when dealing with certain languages  {{{
+autocmd FileType ruby,python,javascript,coffee,markdown autocmd BufWritePre <buffer> :%s/ \+$//ge
 " " }}}
 " Reload vimrc config each time its saved {{{
 augroup myvimrc
-    au!
-    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc,~/.config/nvim/init.vim so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+  au!
+  au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc,~/.config/nvim/init.vim so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
 " }}}
 " Replace highlight line when insert and vice versa {{{
