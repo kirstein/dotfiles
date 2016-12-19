@@ -23,11 +23,21 @@ Plug 'flazz/vim-colorschemes'
 Plug 'digitaltoad/vim-pug'
 Plug 'Konfekt/FastFold'
 Plug 'metakirby5/codi.vim'
-Plug 'dyng/ctrlsf.vim'
 Plug 'kylef/apiblueprint.vim'
 Plug 'avakhov/vim-yaml'
 Plug 'duggiefresh/vim-easydir'
+" Bundle vim-execute-ft {{{
 Plug 'kirstein/vim-execute-ft'
+let g:execute_ft_commands = {
+      \'javascript': { 'all': 'Dispatch npm test', 'single': 'Dispatch npm test -- {file}' },
+      \'ruby': { 'all': 'Rake spec test', 'single': 'Rake spec SPEC={file}' },
+      \'php': { 'all': 'Dispatch composer run test', 'single': 'Dispatch composer run test -- {file}' }
+      \}
+
+map <silent> \\ :call ExecuteByFtLast()<CR>
+map <silent> \a :call ExecuteByFT("all")<CR>
+map <silent> \t :call ExecuteByFT("single")<CR>
+" }}}
 " Bundle neotags {{{
 " Bundle tagbar {{{
 Plug 'majutsushi/tagbar'
@@ -46,11 +56,20 @@ Plug 'tpope/vim-projectionist'
 Plug 'dbakker/vim-projectroot'
 Plug 'tpope/vim-haml'
 Plug 'rizzatti/dash.vim'
+" Bundle ranger {{{
+Plug 'francoiscabrol/ranger.vim'
+nmap <leader>r :Ranger<CR>
+" }}}
+" Bundle tig {{{
+Plug 'codeindulgence/vim-tig'
+nmap tig :Tig!<CR>
+" }}}
+Plug 'rbgrouleff/bclose.vim'
 Plug 'airblade/vim-gitgutter'
 " Bundle deoplete {{{
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
 " Plug ternjs{{{
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern && npm install -g jsctags' }
 " Use deoplete.
@@ -67,7 +86,25 @@ let g:deoplete#file#enable_buffer_path = 1
 Plug 'tpope/vim-markdown'
 Plug 'itspriddle/vim-marked'
 Plug 'editorconfig/editorconfig-vim'
+" Bundle Ag {{{
+" Ag {{{
 Plug 'rking/ag.vim'
+" bind K to grep word under cursor
+nmap K :Ag! "<C-R><C-W>"<CR>
+vmap K y:<C-U>Ag! '<C-R>"'<CR>
+
+" Find all todo tags
+map todo :Ag! -i "todo"<CR>
+map <leader>f :Ag!
+map <leader>F :Ag! -i
+
+" Ctrlsf {{{
+Plug 'dyng/ctrlsf.vim'
+nmap <silent> <C-f> :CtrlSF
+let g:ctrlsf_winsize = '50%'
+" }}}
+" }}}
+" }}}
 " Bundle: CtrlP {{{
 Plug 'ctrlpvim/ctrlp.vim'
 nnoremap /d :CtrlPCurWD<CR>
@@ -94,7 +131,6 @@ let g:ctrlp_use_caching = 0
 Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
-Plug 'jpalardy/vim-slime'
 Plug 'christoomey/vim-tmux-navigator'
 " Bundle: Ale {{{
 Plug 'w0rp/ale'
@@ -150,8 +186,6 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-vinegar'
 Plug 'thinca/vim-visualstar'
 Plug 'mustache/vim-mustache-handlebars'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-notes'
 Plug 'mxw/vim-jsx'
 " }}}
 call plug#end()
@@ -160,64 +194,7 @@ call plug#end()
 filetype plugin indent on
 
 " Testing helpers {{{
-let g:execute_ft_commands = { 
-      \'javascript': { 'all': 'Dispatch npm test', 'single': 'Dispatch npm test -- {file}' },
-      \'ruby': { 'all': 'Rake spec test', 'single': 'Rake spec SPEC={file}' },
-      \'php': { 'all': 'Dispatch composer run test', 'single': 'Dispatch composer run test -- {file}' }
-      \}
-
-map <silent> \\ :call ExecuteByFtLast()<CR>
-map <silent> \a :call ExecuteByFT("all")<CR>
-map <silent> \t :call ExecuteByFT("single")<CR>
-map <silent> <C-c>j :wincmd j<CR>:bd<CR>
 " }}}
-" " Bundle: table {{{
-" let g:table_mode_corner="|"
-" " }}}
-" " Bundle: Rails + rspec {{{
-" map <silent><leader>. :A<CR>
-" map <silent><leader>\ :AV<CR>
-" map <silent><leader>rr :Rake routes<CR>
-" map <silent><leader>re :Rextract 
-
-" map <leader>em :Emodel 
-" map <leader>ec :Econtroller 
-" map <leader>ev :Eview 
-" map <leader>es :Estylesheet 
-" map <leader>el :Elayout 
-" map <leader>vm :Vmodel 
-" map <leader>vc :Vcontroller 
-" map <leader>vv :Vview 
-" map <leader>vs :Vstylesheet 
-" map <leader>vl :Vlayout 
-" " }}}
-" " Bundle: Syntastic {{{
-" let g:syntastic_always_populate_loc_list=1
-" let g:syntastic_javascript_checkers=[ 'eslint' ]
-" }}}
-" Bundle: Notes {{{
-let g:notes_directories = ['~/Dropbox/notes']
-" }}}
-" " Bundle: Neocomplete {{{
-" autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
-" autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-" autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-" autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-
-" let g:acp_enableAtStartup = 0
-" let g:neocomplete#max_list = 10
-" let g:neocomplete#enable_at_startup = 1
-" let g:neocomplete#enable_smart_case = 1
-" let g:neocomplete#sources#syntax#min_keyword_length = 3
-" let g:neocomplete#force_overwrite_completefunc = 1
-
-" " Tab complete
-" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" " }}}
-" " Bundle: Slime {{{
-" let g:slime_target = "tmux"
-" let g:slime_paste_file = tempname()
-" " }}}
 " Bundle: JavaScript {{{
 let g:javascript_plugin_jsdoc = 1
 " }}}
@@ -227,19 +204,6 @@ nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gw :Gwrite<CR>
 nmap <Leader>gc :Gcommit -m 
 nmap <Leader>gp :Gpush
-" }}}
-" Bundle: Ag {{{
-" bind K to grep word under cursor
-nmap K :Ag! "<C-R><C-W>"<CR>
-vmap K y:<C-U>Ag! '<C-R>"'<CR>
-
-" Find all todo tags
-map todo :Ag! -i "todo"<CR>
-map <leader>f :Ag! 
-map <leader>F :Ag! -i 
-
-nmap <silent> <C-f> :CtrlSF 
-let g:ctrlsf_winsize = '50%'
 " }}}
 " Bundle: Gist {{{
 let g:gist_clip_command = 'pbcopy'
@@ -329,16 +293,7 @@ nnoremap \cd :cd %:p:h<CR>:pwd<CR>
 
 " Navigate to root `root_dir` directory
 nnoremap \rd :execute ':cd ' . projectroot#guess() <CR>:pwd<CR>
-
-" let g:netrw_banner       = 0
-let g:netrw_keepdir      = 0
-" let g:netrw_liststyle    = 3
-" let g:netrw_sort_options = 'i'
-" let g:netrw_altv         = 1
-" let g:netrw_browse_split = 4
-
 set browsedir=current
-nnoremap <silent> <C-e> :Lex %:p:h<CR>
 " }}}
 " Clipboard  {{{
 nnoremap <C-y> "+y
@@ -346,30 +301,22 @@ vnoremap <C-y> "+y
 nnoremap <C-p> "+gP
 vnoremap <C-p> "+gP
 " }}}
-" Tags {{{
-" let g:easytags_auto_update = 1
-
-" autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
-" autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-" autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-
-" }}}
 " Folding {{{
 set modelines=1
 " set nofoldenable
 set foldmethod=indent
 " set foldmarker={,}
-set foldlevelstart=1
+set foldlevelstart=100
 set foldnestmax=4
 nnoremap <Leader>z zMzAzz
 " }}}
 " Bash helpers {{{
-nmap tig :!tig %<CR>
 
 " Format json
 nmap =j :%!python -m json.tool<CR>
 " }}}
 " General {{{
+map <silent> <C-c>j :wincmd j<CR>:bd<CR>
 " Give access to mouse support
 " Usable for resizing panes
 set mouse+=a
