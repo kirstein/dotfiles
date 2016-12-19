@@ -16,9 +16,8 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
     autocmd VimEnter * call AuPlugged()
   augroup END
 endif
-" }}}
 call plug#begin('~/.local/share/nvim/plugged')
-" Bundles {{{
+" Plugs {{{
 Plug 'flazz/vim-colorschemes'
 Plug 'digitaltoad/vim-pug'
 Plug 'Konfekt/FastFold'
@@ -26,7 +25,7 @@ Plug 'metakirby5/codi.vim'
 Plug 'kylef/apiblueprint.vim'
 Plug 'avakhov/vim-yaml'
 Plug 'duggiefresh/vim-easydir'
-" Bundle vim-execute-ft {{{
+" Plug vim-execute-ft {{{
 Plug 'kirstein/vim-execute-ft'
 let g:execute_ft_commands = {
       \'javascript': { 'all': 'Dispatch npm test', 'single': 'Dispatch npm test -- {file}' },
@@ -38,8 +37,7 @@ map <silent> \\ :call ExecuteByFtLast()<CR>
 map <silent> \a :call ExecuteByFT("all")<CR>
 map <silent> \t :call ExecuteByFT("single")<CR>
 " }}}
-" Bundle neotags {{{
-" Bundle tagbar {{{
+" Plug tagbar {{{
 Plug 'majutsushi/tagbar'
 nmap <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
@@ -56,17 +54,17 @@ Plug 'tpope/vim-projectionist'
 Plug 'dbakker/vim-projectroot'
 Plug 'tpope/vim-haml'
 Plug 'rizzatti/dash.vim'
-" Bundle ranger {{{
+" Plug ranger {{{
 Plug 'francoiscabrol/ranger.vim'
 nmap <leader>r :Ranger<CR>
 " }}}
-" Bundle tig {{{
+" Plug tig {{{
 Plug 'codeindulgence/vim-tig'
 nmap tig :Tig!<CR>
 " }}}
 Plug 'rbgrouleff/bclose.vim'
 Plug 'airblade/vim-gitgutter'
-" Bundle deoplete {{{
+" Plug deoplete {{{
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
@@ -86,7 +84,7 @@ let g:deoplete#file#enable_buffer_path = 1
 Plug 'tpope/vim-markdown'
 Plug 'itspriddle/vim-marked'
 Plug 'editorconfig/editorconfig-vim'
-" Bundle Ag {{{
+" Plug Ag {{{
 " Ag {{{
 Plug 'rking/ag.vim'
 " bind K to grep word under cursor
@@ -98,14 +96,14 @@ map todo :Ag! -i "todo"<CR>
 map <leader>f :Ag!
 map <leader>F :Ag! -i
 
+" }}}
 " Ctrlsf {{{
 Plug 'dyng/ctrlsf.vim'
 nmap <silent> <C-f> :CtrlSF
 let g:ctrlsf_winsize = '50%'
 " }}}
 " }}}
-" }}}
-" Bundle: CtrlP {{{
+" Plug: CtrlP {{{
 Plug 'ctrlpvim/ctrlp.vim'
 nnoremap /d :CtrlPCurWD<CR>
 nnoremap /b :CtrlPBuffer<CR>
@@ -132,15 +130,17 @@ Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
 Plug 'christoomey/vim-tmux-navigator'
-" Bundle: Ale {{{
+" Plug: Ale {{{
 Plug 'w0rp/ale'
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 " }}}
 Plug 'kana/vim-textobj-user'
 Plug 'coderifous/textobj-word-column.vim'
 Plug 'kana/vim-textobj-indent'
-Plug 'kana/vim-smartinput'
-" Bundle: Easymotion {{{
+" {{{
+Plug 'cohama/lexima.vim'
+" }}}
+" Plug: Easymotion {{{
 Plug 'Lokaltog/vim-easymotion'
 map <Space> <Plug>(easymotion-s)
 let g:EasyMotion_use_smartsign_us = 1
@@ -161,7 +161,7 @@ let g:gutentags_exclude = ['*.min', 'node_modules']
 " let g:gutentags_trace=1
 " }}}
 "Plug 'edsono/vim-matchit'
-" Bundle: Ultisnips {{{
+" Plug: Ultisnips {{{
 Plug 'SirVer/ultisnips' |  Plug 'kirstein/vim-snippets'
 " c-o triggers a snippet
 let g:UltiSnipsExpandTrigger="<c-o>"
@@ -195,17 +195,17 @@ filetype plugin indent on
 
 " Testing helpers {{{
 " }}}
-" Bundle: JavaScript {{{
+" Plug: JavaScript {{{
 let g:javascript_plugin_jsdoc = 1
 " }}}
-" Bundle: Fugitive {{{
+" Plug: Fugitive {{{
 nmap <Leader>gb :Gblame<CR>
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gw :Gwrite<CR>
 nmap <Leader>gc :Gcommit -m 
 nmap <Leader>gp :Gpush
 " }}}
-" Bundle: Gist {{{
+" Plug: Gist {{{
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
 let g:gist_post_private = 1
