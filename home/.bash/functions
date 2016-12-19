@@ -80,5 +80,10 @@ function ghc-pkg-reset() {
     echo 'erasing ~/.cabal/lib'; command rm -rf ~/.cabal/lib; \
   )
 }
- 
+
+# Homesick commit && push
+function hs {
+  homesick commit && homesick push
+}
+
 alias cabalupgrades="cabal list --installed  | egrep -iv '(synopsis|homepage|license)'"

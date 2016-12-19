@@ -386,6 +386,9 @@ nmap <leader>s :w!<cr>
 " Fuzzy search with find
 set path+=**
 
+" Open locationlist
+nnoremap <silent> <Leader>l :lopen<CR>
+
 " Display the last search in quickfix window
 nnoremap <silent> <Leader>/ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
 
