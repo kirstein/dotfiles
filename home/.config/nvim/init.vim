@@ -82,6 +82,7 @@ let g:deoplete#file#enable_buffer_path = 1
 " }}}
 " }}}
 Plug 'tpope/vim-markdown'
+Plug 'neilagabriel/vim-geeknote', { 'dir': '~/geeknote',  'do': 'git clone git://github.com/jeffkowalski/geeknote.git && python2 setup.py build && pip2 install --upgrade .' }
 Plug 'itspriddle/vim-marked'
 Plug 'editorconfig/editorconfig-vim'
 " Plug Ag {{{
@@ -103,29 +104,47 @@ nmap <silent> <C-f> :CtrlSF
 let g:ctrlsf_winsize = '50%'
 " }}}
 " }}}
-" Plug: CtrlP {{{
-Plug 'ctrlpvim/ctrlp.vim'
-nnoremap /d :CtrlPCurWD<CR>
-nnoremap /b :CtrlPBuffer<CR>
-nnoremap /m :CtrlPMRU<CR>
-nnoremap /x :CtrlPTag<CR>
-nnoremap /a :CtrlPCurFile<CR>
-nnoremap /g :CtrlPLine<CR>
+" Plug fzf {{{
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
-" Add fugitive porn to ignore
-let g:ctrlp_custom_ignore = '\.fugitive.*'
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
-" Overwrite the default mapping in order to let the C+p work
-let g:ctrlp_map = "/t"
-let g:ctrlp_extensions = [ 'line' ]
-
-let g:ctrlp_working_path_mode = 'ra'
-" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_custom_ignore = 'jmeter\|coverage\|target\|node_modules\|.DS_Store\|.git\'
-" ag is fast enough that CtrlP doesn't need to cache
-let g:ctrlp_use_caching = 0
+" Select from directory using AG {{{
+function! FZFSearchInDir(...)
+  call fzf#vim#ag(join(a:000[1:], ' '), extend({'dir': a:1}, g:fzf#vim#default_layout))
+endfunction
+command! -nargs=+ -complete=dir FZFAgIn call FZFSearchInDir(<f-args>)
 " }}}
+
+nnoremap /f :FZFAgIn %:p:h<CR>
+nnoremap /d :Files<CR>
+nnoremap /x :Tags<CR>
+nnoremap /b :Buffers<CR>
+nnoremap /m :History<CR>
+
+
+" " Plug: CtrlP {{{
+" Plug 'ctrlpvim/ctrlp.vim'
+" nnoremap /d :CtrlPCurWD<CR>
+" nnoremap /b :CtrlPBuffer<CR>
+" nnoremap /m :CtrlPMRU<CR>
+" nnoremap /a :CtrlPCurFile<CR>
+
+" " Add fugitive porn to ignore
+" let g:ctrlp_custom_ignore = '\.fugitive.*'
+
+" " Overwrite the default mapping in order to let the C+p work
+" let g:ctrlp_map = "/t"
+" let g:ctrlp_extensions = [ 'line' ]
+
+" let g:ctrlp_working_path_mode = 'ra'
+" " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+" let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+" let g:ctrlp_custom_ignore = 'jmeter\|coverage\|target\|node_modules\|.DS_Store\|.git\'
+" " ag is fast enough that CtrlP doesn't need to cache
+" let g:ctrlp_use_caching = 0
+" " }}}
 Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'

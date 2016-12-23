@@ -91,3 +91,5 @@ export EDITOR="vim"
 export NPM_TOKEN=$(sed -n 's/.*authToken=//p' ~/.npmrc)
 
 [ -s "/Users/kirstein/.scm_breeze/scm_breeze.sh" ] && source "/Users/kirstein/.scm_breeze/scm_breeze.sh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
