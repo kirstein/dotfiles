@@ -110,18 +110,28 @@ Plug 'junegunn/fzf.vim'
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
-" Select from directory using AG {{{
+" Search from directory using AG {{{
 function! FZFSearchInDir(...)
   call fzf#vim#ag(join(a:000[1:], ' '), extend({'dir': a:1}, g:fzf#vim#default_layout))
 endfunction
 command! -nargs=+ -complete=dir FZFAgIn call FZFSearchInDir(<f-args>)
 " }}}
 
+" Project root files {{{
+function! FZFFindGitRoot()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+
+command! FZFProjectFiles execute 'Files' FZFFindGitRoot()
+" }}}
+
 nnoremap /f :FZFAgIn %:p:h<CR>
-nnoremap /d :Files<CR>
+nnoremap /d :FZFProjectFiles<CR>
+nnoremap /a :Files<CR>
 nnoremap /x :Tags<CR>
 nnoremap /b :Buffers<CR>
 nnoremap /m :History<CR>
+" }}}
 
 
 " " Plug: CtrlP {{{
