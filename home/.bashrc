@@ -13,3 +13,5 @@ export LC_ALL=en_US.UTF-8
 for file in $(find ~/.bash/ -mindepth 1 -maxdepth 1 -type f) ; do
   [[ -r $file ]] && source "$file"
 done
+
+# [ -f ~/.fzf.bash ] && source ~/.fzf.bash

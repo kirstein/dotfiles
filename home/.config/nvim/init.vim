@@ -25,6 +25,7 @@ Plug 'metakirby5/codi.vim'
 Plug 'kylef/apiblueprint.vim'
 Plug 'avakhov/vim-yaml'
 Plug 'duggiefresh/vim-easydir'
+Plug 'hashivim/vim-terraform'
 " Plug vim-execute-ft {{{
 Plug 'kirstein/vim-execute-ft'
 let g:execute_ft_commands = {
@@ -55,8 +56,7 @@ Plug 'dbakker/vim-projectroot'
 Plug 'tpope/vim-haml'
 Plug 'rizzatti/dash.vim'
 " Plug ranger {{{
-Plug 'francoiscabrol/ranger.vim'
-nmap <leader>r :Ranger<CR>
+Plug 'francoiscabrol/ranger.vim', { 'do': 'brew install ranger' }
 " }}}
 " Plug tig {{{
 Plug 'codeindulgence/vim-tig'
@@ -82,27 +82,12 @@ let g:deoplete#file#enable_buffer_path = 1
 " }}}
 " }}}
 Plug 'tpope/vim-markdown'
-Plug 'neilagabriel/vim-geeknote', { 'dir': '~/geeknote',  'do': 'git clone git://github.com/jeffkowalski/geeknote.git && python2 setup.py build && pip2 install --upgrade .' }
 Plug 'itspriddle/vim-marked'
 Plug 'editorconfig/editorconfig-vim'
-" Plug Ag {{{
-" Ag {{{
-Plug 'rking/ag.vim'
-" bind K to grep word under cursor
-nmap K :Ag! "<C-R><C-W>"<CR>
-vmap K y:<C-U>Ag! '<C-R>"'<CR>
-
-" Find all todo tags
-map todo :Ag! -i "todo"<CR>
-map <leader>f :Ag!
-map <leader>F :Ag! -i
-
-" }}}
 " Ctrlsf {{{
 Plug 'dyng/ctrlsf.vim'
 nmap <silent> <C-f> :CtrlSF
 let g:ctrlsf_winsize = '50%'
-" }}}
 " }}}
 " Plug fzf {{{
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -125,36 +110,14 @@ endfunction
 command! FZFProjectFiles execute 'Files' FZFFindGitRoot()
 " }}}
 
+nmap K :Ag <C-R><C-W><CR>
 nnoremap /f :FZFAgIn %:p:h<CR>
 nnoremap /d :FZFProjectFiles<CR>
-nnoremap /a :Files<CR>
+nnoremap /a :Files %:p:h<CR>
 nnoremap /x :Tags<CR>
 nnoremap /b :Buffers<CR>
 nnoremap /m :History<CR>
 " }}}
-
-
-" " Plug: CtrlP {{{
-" Plug 'ctrlpvim/ctrlp.vim'
-" nnoremap /d :CtrlPCurWD<CR>
-" nnoremap /b :CtrlPBuffer<CR>
-" nnoremap /m :CtrlPMRU<CR>
-" nnoremap /a :CtrlPCurFile<CR>
-
-" " Add fugitive porn to ignore
-" let g:ctrlp_custom_ignore = '\.fugitive.*'
-
-" " Overwrite the default mapping in order to let the C+p work
-" let g:ctrlp_map = "/t"
-" let g:ctrlp_extensions = [ 'line' ]
-
-" let g:ctrlp_working_path_mode = 'ra'
-" " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-" let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-" let g:ctrlp_custom_ignore = 'jmeter\|coverage\|target\|node_modules\|.DS_Store\|.git\'
-" " ag is fast enough that CtrlP doesn't need to cache
-" let g:ctrlp_use_caching = 0
-" " }}}
 Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
@@ -166,7 +129,7 @@ let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 Plug 'kana/vim-textobj-user'
 Plug 'coderifous/textobj-word-column.vim'
 Plug 'kana/vim-textobj-indent'
-" {{{
+" {{{ Plugin lexima
 Plug 'cohama/lexima.vim'
 " }}}
 " Plug: Easymotion {{{
@@ -561,6 +524,21 @@ highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 " }}}
 
+" Global undo list {{{
+let vimDir = '$HOME/.config/nvim'
+set undolevels=1000
+set undoreload=10000
+
+" Keep undo history across sessions by storing it in a file
+if has('persistent_undo')
+    let myUndoDir = expand(vimDir . '/undodir')
+    " Create dirs
+    call system('mkdir -p' . vimDir)
+    call system('mkdir -p' . myUndoDir)
+    let &undodir = myUndoDir
+    set undofile
+endif
+" }}}
 " Autocommands {{{
 " Display too long lines {{{
 autocmd FileType ruby,python,javascript,coffee,vim autocmd BufWritePre <buffer> match ErrorMsg '\%>100v.\+'
