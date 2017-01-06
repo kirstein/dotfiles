@@ -89,7 +89,8 @@ export PATH="/usr/local/sbin:$PATH"
 export EDITOR="vim"
 
 export NPM_TOKEN=$(sed -n 's/.*authToken=//p' ~/.npmrc)
+export FZF_DEFAULT_COMMAND='ag -g ""'
 
 [ -s "/Users/kirstein/.scm_breeze/scm_breeze.sh" ] && source "/Users/kirstein/.scm_breeze/scm_breeze.sh"
 
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

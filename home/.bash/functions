@@ -87,9 +87,8 @@ function hs {
 }
 
 # Codi
-# Codi
 # Usage: codi [filetype] [filename]
-codi() {
+function codi {
   local syntax="${1:-python}"
   shift
   nvim -c \
@@ -98,6 +97,11 @@ codi() {
     hi VertSplit ctermbg=NONE |\
     hi NonText ctermfg=0 |\
     Codi $syntax" "$@"
+}
+
+# fzf vim
+function fz {
+  vim $(fzf-tmux -m)
 }
 
 
