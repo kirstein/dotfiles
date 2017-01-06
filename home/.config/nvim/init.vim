@@ -16,9 +16,9 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
     autocmd VimEnter * call AuPlugged()
   augroup END
 endif
-call plug#begin('~/.local/share/nvim/plugged')
 " }}}
 " Plugs {{{
+call plug#begin('~/.local/share/nvim/plugged')
 Plug 'flazz/vim-colorschemes'
 Plug 'digitaltoad/vim-pug'
 Plug 'Konfekt/FastFold'
