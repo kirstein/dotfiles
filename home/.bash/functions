@@ -101,7 +101,10 @@ function codi {
 
 # fzf vim
 function fz {
-  vim $(fzf-tmux -m)
+  local files=`fzf-tmux -m`
+  if [[ $? -eq 0 ]] && [[ -n $files ]]; then
+    vim $files
+  fi
 }
 
 
