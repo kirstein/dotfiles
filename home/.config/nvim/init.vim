@@ -17,6 +17,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   augroup END
 endif
 call plug#begin('~/.local/share/nvim/plugged')
+" }}}
 " Plugs {{{
 Plug 'flazz/vim-colorschemes'
 Plug 'digitaltoad/vim-pug'
@@ -179,7 +180,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'thinca/vim-visualstar'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'mxw/vim-jsx'
-" }}}
+Plug 'wellle/targets.vim'
 call plug#end()
 " }}}
 
