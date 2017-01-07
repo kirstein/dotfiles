@@ -40,7 +40,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git-extras last-working-dir z vi-mode)
+plugins=(git-extras last-working-dir vi-mode)
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
@@ -93,4 +93,5 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 
 [ -s "/Users/kirstein/.scm_breeze/scm_breeze.sh" ] && source "/Users/kirstein/.scm_breeze/scm_breeze.sh"
 
+eval "$(fasd --init auto)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -6,6 +6,11 @@ alias awesome="echo you are awesome"
 alias bower='noglob bower'
 
 # -------------------------------------------------------------------
+# Fasd
+# -------------------------------------------------------------------
+alias z="fasd_cd -d -i"
+
+# -------------------------------------------------------------------
 # Pure awesome
 # -------------------------------------------------------------------
 alias vim="nvim"
@@ -38,7 +43,6 @@ alias grep='grep --color=auto'    # Always colored grep
 alias battery="~/.bash/battery/battery"
 alias cl="clear"            # Clear
 alias mkdir="mkdir -p"      # Make all dirs
-alias h="history"           # History
 alias j="jobs -p"           # All jobs + progresses
 alias bc='bc -l'            # Calculator
 alias pa="ps aux"           # Ps aux

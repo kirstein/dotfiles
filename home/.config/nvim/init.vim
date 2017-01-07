@@ -23,8 +23,6 @@ Plug 'flazz/vim-colorschemes'
 Plug 'digitaltoad/vim-pug'
 Plug 'Konfekt/FastFold'
 Plug 'metakirby5/codi.vim'
-Plug 'kylef/apiblueprint.vim'
-Plug 'avakhov/vim-yaml'
 Plug 'duggiefresh/vim-easydir'
 Plug 'hashivim/vim-terraform'
 " Plug vim-execute-ft {{{
@@ -52,18 +50,16 @@ let g:tagbar_indent = 4
 let g:tagbar_iconchars = [' ', ' ']
 nnoremap <leader><F4> :TagbarToggle<CR>/
 " }}}
-Plug 'tpope/vim-projectionist'
 Plug 'dbakker/vim-projectroot'
-Plug 'tpope/vim-haml'
-Plug 'rizzatti/dash.vim'
 " Plug ranger {{{
 Plug 'francoiscabrol/ranger.vim', { 'do': 'brew install ranger' }
+" Must have deps
+Plug 'rbgrouleff/bclose.vim'
 " }}}
 " Plug tig {{{
 Plug 'codeindulgence/vim-tig'
 nmap tig :Tig!<CR>
 " }}}
-Plug 'rbgrouleff/bclose.vim'
 Plug 'airblade/vim-gitgutter'
 " Plug deoplete {{{
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -121,15 +117,23 @@ nnoremap /m :History<CR>
 " }}}
 Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim'
+" Plug: Gist {{{
 Plug 'mattn/gist-vim'
+let g:gist_clip_command = 'pbcopy'
+let g:gist_detect_filetype = 1
+let g:gist_post_private = 1
+let g:gist_show_privates = 1
+" }}}
 Plug 'christoomey/vim-tmux-navigator'
 " Plug: Ale {{{
 Plug 'w0rp/ale'
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 " }}}
+" {{{ Textobjects
 Plug 'kana/vim-textobj-user'
 Plug 'coderifous/textobj-word-column.vim'
 Plug 'kana/vim-textobj-indent'
+" }}}
 " {{{ Plugin lexima
 Plug 'cohama/lexima.vim'
 " }}}
@@ -144,7 +148,10 @@ map /j <Plug>(easymotion-j)
 map /k <Plug>(easymotion-k)
 " }}}
 Plug 'airblade/vim-gitgutter'
+" Plug: JavaScript {{{
 Plug 'pangloss/vim-javascript'
+let g:javascript_plugin_jsdoc = 1
+" }}}
 Plug 'moll/vim-node'
 " Gutentags {{{
 Plug 'ludovicchabant/vim-gutentags'
@@ -170,7 +177,14 @@ endif
 Plug 'kshenoy/vim-signature'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
+" Plug: Fugitive {{{
 Plug 'tpope/vim-fugitive'
+nmap <Leader>gb :Gblame<CR>
+nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gw :Gwrite<CR>
+nmap <Leader>gc :Gcommit -m
+nmap <Leader>gp :Gpush
+" }}}
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -187,22 +201,6 @@ call plug#end()
 filetype plugin indent on
 
 " Testing helpers {{{
-" }}}
-" Plug: JavaScript {{{
-let g:javascript_plugin_jsdoc = 1
-" }}}
-" Plug: Fugitive {{{
-nmap <Leader>gb :Gblame<CR>
-nmap <Leader>gs :Gstatus<CR>
-nmap <Leader>gw :Gwrite<CR>
-nmap <Leader>gc :Gcommit -m 
-nmap <Leader>gp :Gpush
-" }}}
-" Plug: Gist {{{
-let g:gist_clip_command = 'pbcopy'
-let g:gist_detect_filetype = 1
-let g:gist_post_private = 1
-let g:gist_show_privates = 1
 " }}}
 
 " Statusline {{{
@@ -296,7 +294,7 @@ vnoremap <C-p> "+gP
 " }}}
 " Folding {{{
 set modelines=1
-" set nofoldenable
+set nofoldenable
 set foldmethod=indent
 " set foldmarker={,}
 set foldlevelstart=100

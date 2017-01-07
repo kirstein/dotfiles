@@ -101,11 +101,20 @@ function codi {
 
 # fzf vim
 function fz {
-  local files=`fzf-tmux -m`
+  local files=`fzf-tmux -m --black`
   if [[ $? -eq 0 ]] && [[ -n $files ]]; then
     vim $files
   fi
 }
 
+# fzf search history
+function h() {
+  eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf --black +s --tac | sed 's/ *[0-9]* *//')
+}
+
+function zv() {
+  local file
+  file="$(fasd -Rfl "$1" | fzf -1 -0 --no-sort +m)" && vim "${file}" || return 1
+}
 
 alias cabalupgrades="cabal list --installed  | egrep -iv '(synopsis|homepage|license)'"
