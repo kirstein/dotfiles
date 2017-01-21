@@ -25,6 +25,13 @@ Plug 'Konfekt/FastFold'
 Plug 'metakirby5/codi.vim'
 Plug 'duggiefresh/vim-easydir'
 Plug 'hashivim/vim-terraform'
+" Plug python crap {{{
+Plug 'zchee/deoplete-jedi', { 'do': 'pip install jedi' }
+Plug 'python-mode/python-mode'
+" }}}
+" Plug neoformat {{{
+Plug 'sbdchd/neoformat', { 'do': 'npm i -g esformatter' }
+" }}}
 " Plug vim-execute-ft {{{
 Plug 'kirstein/vim-execute-ft'
 let g:execute_ft_commands = {
@@ -308,6 +315,8 @@ nmap =j :%!python -m json.tool<CR>
 " }}}
 " General {{{
 map <silent> <C-c>j :wincmd j<CR>:bd<CR>
+map <silent> nl :lnext<CR>
+map <silent> nl :lnext<CR>
 " Give access to mouse support
 " Usable for resizing panes
 set mouse+=a

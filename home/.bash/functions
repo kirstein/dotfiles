@@ -107,10 +107,10 @@ function fz {
   fi
 }
 
-# fzf search history
-function h() {
-  eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf --black +s --tac | sed 's/ *[0-9]* *//')
-}
+# # fzf search history
+# function h() {
+#   $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf --black +s -x --tac | sed 's/ *[0-9]* *//')
+# }
 
 function zv() {
   local file
