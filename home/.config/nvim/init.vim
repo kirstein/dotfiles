@@ -30,7 +30,7 @@ Plug 'zchee/deoplete-jedi', { 'do': 'pip install jedi' }
 Plug 'python-mode/python-mode'
 " }}}
 " Plug neoformat {{{
-Plug 'sbdchd/neoformat', { 'do': 'npm i -g esformatter' }
+Plug 'sbdchd/neoformat', { 'do': 'npm i -g esformatter jsbeautify' }
 " }}}
 " Plug vim-execute-ft {{{
 Plug 'kirstein/vim-execute-ft'
@@ -464,9 +464,6 @@ set ambiwidth=double
 " Enable syntax highlighting
 syntax enable
 
-" Line numbers
-set number
-
 set cursorline
 
 colorscheme monokai
@@ -518,7 +515,8 @@ set nojoinspaces
 set autowriteall
 
 " Use relative numbers
-set relativenumber
+" set relativenumber
+" set number
 " }}}
 " List chars {{{
 set showbreak=↪
@@ -628,6 +626,13 @@ endfunction
 " }}}
 " Duplicate line under cursor {{{
 nmap <silent> <Leader>dd :call DupLine()<CR>
+
+function! ToggleNumbers()
+  set relativenumber!
+  set number!
+endfunction
+
+nmap <silent> con :call ToggleNumbers()<CR>
 
 " Duplicate the current line and keep the cursor as it was
 function! DupLine()
