@@ -21,7 +21,14 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'flazz/vim-colorschemes'
 Plug 'digitaltoad/vim-pug'
 Plug 'Konfekt/FastFold'
+" Plug codi {{{
+fun! CodiFt()
+  exec ":tabnew \| Codi " . &ft
+endfunction
+
+nmap codi :call CodiFt()<CR>
 Plug 'metakirby5/codi.vim'
+" }}}
 Plug 'duggiefresh/vim-easydir'
 Plug 'hashivim/vim-terraform'
 " Plug python crap {{{
