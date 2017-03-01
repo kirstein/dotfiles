@@ -13,6 +13,7 @@ alias z="fasd_cd -d -i"
 # -------------------------------------------------------------------
 # Pure awesome
 # -------------------------------------------------------------------
+alias tf="terraform"
 alias vim="nvim"
 alias tmux="tmux -2 -u"
 alias please="sudo"
