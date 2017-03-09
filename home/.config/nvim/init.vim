@@ -28,6 +28,9 @@ endfunction
 
 nmap codi :call CodiFt()<CR>
 Plug 'metakirby5/codi.vim'
+" Plug autoformat {{{
+Plug 'Chiel92/vim-autoformat'
+noremap <F3> :Autoformat<CR>
 " }}}
 Plug 'duggiefresh/vim-easydir'
 Plug 'hashivim/vim-terraform'
@@ -89,6 +92,7 @@ autocmd CompleteDone * pclose
 let g:deoplete#enable_refresh_always = 1
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#file#enable_buffer_path = 1
+let g:deoplete#auto_complete_delay = 150
 " }}}
 " }}}
 Plug 'tpope/vim-markdown'
@@ -195,7 +199,7 @@ Plug 'SirVer/ultisnips' |  Plug 'kirstein/vim-snippets'
 let g:UltiSnipsExpandTrigger="<c-o>"
 
 " load snippets from dir
-let snipsDir = $HOME."/workspace/github/kirstein/vim-snippets/"
+let snipsDir = $HOME."/workspace/kirstein/vim-snippets/"
 let g:UltiSnipsSnippetDirectories=[ 'UltiSnips' ]
 if isdirectory(snipsDir)
   let g:UltiSnipsSnippetDirectories=[ snipsDir."/UltiSnips" ]
@@ -331,9 +335,6 @@ nnoremap <Leader>z zMzAzz
 " }}}
 " Bash helpers {{{
 
-" Format json
-nmap =j :%!python -m json.tool<CR>
-" }}}
 " General {{{
 map <silent> <C-c>j :wincmd j<CR>:bd<CR>
 map <silent> nl :lnext<CR>
