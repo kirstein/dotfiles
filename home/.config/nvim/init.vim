@@ -18,6 +18,7 @@ endif
 " }}}
 " Plugs {{{
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'mhinz/vim-startify'
 Plug 'flazz/vim-colorschemes'
 Plug 'digitaltoad/vim-pug'
 Plug 'Konfekt/FastFold'
