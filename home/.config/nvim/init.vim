@@ -117,21 +117,17 @@ endfunction
 command! -nargs=+ -complete=dir FZFAgIn call FZFSearchInDir(<f-args>)
 " }}}
 
-" Project root files {{{
-function! FZFFindGitRoot()
-  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
-endfunction
-
-command! FZFProjectFiles execute 'Files' FZFFindGitRoot()
-" }}}
+imap <expr> <c-x><c-f> fzf#vim#complete#path('git ls-files $(git rev-parse --show-toplevel)')
 
 nmap K :Ag <C-R><C-W><CR>
 nnoremap /f :FZFAgIn %:p:h<CR>
-nnoremap /d :FZFProjectFiles<CR>
+nnoremap /d :GFiles<CR>
 nnoremap /a :Files %:p:h<CR>
+nnoremap /s :Files<CR>
 nnoremap /x :Tags<CR>
 nnoremap /b :Buffers<CR>
 nnoremap /m :History<CR>
+nmap <Leader>gs :GFiles?<CR>
 
 " FASD integration {{{
 
@@ -189,7 +185,7 @@ Plug 'moll/vim-node'
 " Gutentags {{{
 Plug 'ludovicchabant/vim-gutentags'
 set tags=./tags;,tags;
-let g:gutentags_exclude = ['*.min', 'node_modules']
+let g:gutentags_ctags_exclude = ['*.min', 'node_modules']
 " let g:gutentags_ctags_executable_javascript = '~/.config/nvim/scripts/jsctags.sh'
 " let g:gutentags_trace=1
 " }}}
@@ -213,7 +209,6 @@ Plug 'tpope/vim-commentary'
 " Plug: Fugitive {{{
 Plug 'tpope/vim-fugitive'
 nmap <Leader>gb :Gblame<CR>
-nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gw :Gwrite<CR>
 nmap <Leader>gc :Gcommit -m
 nmap <Leader>gp :Gpush
