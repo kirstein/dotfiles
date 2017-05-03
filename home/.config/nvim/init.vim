@@ -40,7 +40,7 @@ Plug 'zchee/deoplete-jedi', { 'do': 'pip install jedi' }
 Plug 'python-mode/python-mode'
 " }}}
 " Plug neoformat {{{
-Plug 'sbdchd/neoformat', { 'do': 'npm i -g esformatter jsbeautify' }
+Plug 'sbdchd/neoformat', { 'do': 'npm i -g esformatter js-beautify' }
 " }}}
 " Plug vim-execute-ft {{{
 Plug 'kirstein/vim-execute-ft'
