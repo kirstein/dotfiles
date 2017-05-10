@@ -10,3 +10,9 @@
 [submodule "home/yeoman-zsh"]
 	path = home/yeoman-zsh
 	url = https://github.com/edouard-lopez/yeoman-zsh-plugin.git
+[submodule "zsh-autosuggestions"]
+	path = zsh-autosuggestions
+	url = git://github.com/zsh-users/zsh-autosuggestions
+[submodule "home/.bash/zsh-autosuggestions"]
+	path = home/.bash/zsh-autosuggestions
+	url = git://github.com/zsh-users/zsh-autosuggestions
