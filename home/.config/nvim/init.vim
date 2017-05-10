@@ -18,6 +18,7 @@ endif
 " }}}
 " Plugs {{{
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-startify'
 Plug 'flazz/vim-colorschemes'
 Plug 'digitaltoad/vim-pug'
@@ -117,11 +118,18 @@ endfunction
 command! -nargs=+ -complete=dir FZFAgIn call FZFSearchInDir(<f-args>)
 " }}}
 
+" Project root files {{{
+function! FZFFindGitRoot()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+command! FZFProjectFiles execute 'Files' FZFFindGitRoot()
+" }}}
+
 imap <expr> <c-x><c-f> fzf#vim#complete#path('git ls-files $(git rev-parse --show-toplevel)')
 
 nmap K :Ag <C-R><C-W><CR>
 nnoremap /f :FZFAgIn %:p:h<CR>
-nnoremap /d :GFiles<CR>
+nnoremap /d :FZFProjectFiles<CR>
 nnoremap /a :Files %:p:h<CR>
 nnoremap /s :Files<CR>
 nnoremap /x :Tags<CR>
