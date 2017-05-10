@@ -65,6 +65,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Custom lambda template
 source ~/.bash/custom-lambda.zsh-theme
+source ~/.bash/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Automatically switch between node modules
 # place this after nvm initialization!
