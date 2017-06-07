@@ -22,7 +22,6 @@ Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-startify'
 Plug 'flazz/vim-colorschemes'
 Plug 'digitaltoad/vim-pug'
-Plug 'Konfekt/FastFold'
 " Plug codi {{{
 fun! CodiFt()
   exec ":tabnew \| Codi " . &ft
@@ -35,11 +34,8 @@ Plug 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR>
 " }}}
 Plug 'duggiefresh/vim-easydir'
-Plug 'hashivim/vim-terraform'
-" Plug python crap {{{
-Plug 'zchee/deoplete-jedi', { 'do': 'pip install jedi' }
-Plug 'python-mode/python-mode'
-" }}}
+Plug 'roxma/nvim-completion-manager'
+Plug 'roxma/nvim-cm-tern', {'do': 'npm install'}
 " Plug neoformat {{{
 Plug 'sbdchd/neoformat', { 'do': 'npm i -g esformatter js-beautify' }
 " }}}
@@ -79,24 +75,6 @@ Plug 'codeindulgence/vim-tig'
 nmap tig :Tig!<CR>
 " }}}
 Plug 'airblade/vim-gitgutter'
-" Plug deoplete {{{
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
-" Plug ternjs{{{
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern && npm install -g jsctags' }
-" Use deoplete.
-let g:tern_request_timeout = 1
-let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
-let g:tern#arguments = ["--persistent"]
-autocmd CompleteDone * pclose
-" Use deoplete.
-let g:deoplete#enable_refresh_always = 1
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#file#enable_buffer_path = 1
-let g:deoplete#auto_complete_delay = 150
-" }}}
-" }}}
 Plug 'tpope/vim-markdown'
 Plug 'itspriddle/vim-marked'
 Plug 'editorconfig/editorconfig-vim'
@@ -126,6 +104,7 @@ command! FZFProjectFiles execute 'Files' FZFFindGitRoot()
 " }}}
 
 imap <expr> <c-x><c-f> fzf#vim#complete#path('git ls-files $(git rev-parse --show-toplevel)')
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
 
 nmap K :Ag <C-R><C-W><CR>
 nnoremap /f :FZFAgIn %:p:h<CR>
@@ -216,6 +195,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 " Plug: Fugitive {{{
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 nmap <Leader>gb :Gblame<CR>
 nmap <Leader>gw :Gwrite<CR>
 nmap <Leader>gc :Gcommit -m
@@ -711,6 +691,7 @@ iab teh the
 iab testilo testlio
 iab quesiton question
 iab worksapce workspace
+iab stirngify stringify
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
