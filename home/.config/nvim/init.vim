@@ -220,6 +220,7 @@ call plug#end()
 filetype plugin indent on
 
 " Testing helpers {{{
+
 " }}}
 
 " Statusline {{{
@@ -266,8 +267,10 @@ set statusline+=%{&paste?'[paste]':''}
 set statusline+=%*
 
 set statusline+=%=      "left/right separator
-set statusline+=%{fugitive#statusline()}
+set statusline+=%{fugitive#statusline()}%m%=%f[%02p%%,04l,%03v]
 set laststatus=2
+
+
 
 "recalculate the tab warning flag when idle and after writing
 autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
@@ -477,6 +480,9 @@ syntax enable
 set cursorline
 
 colorscheme monokai
+
+highlight WordUnder ctermfg = 13
+autocmd CursorMoved * exe printf('match WordUnder /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf-8
