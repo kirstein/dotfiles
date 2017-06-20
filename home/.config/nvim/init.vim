@@ -18,6 +18,7 @@ endif
 " }}}
 " Plugs {{{
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'kylef/apiblueprint.vim'
 Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-startify'
 Plug 'flazz/vim-colorschemes'
@@ -36,6 +37,8 @@ noremap <F3> :Autoformat<CR>
 Plug 'duggiefresh/vim-easydir'
 Plug 'roxma/nvim-completion-manager'
 Plug 'roxma/nvim-cm-tern', {'do': 'npm install'}
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Plug neoformat {{{
 Plug 'sbdchd/neoformat', { 'do': 'npm i -g esformatter js-beautify' }
 " }}}
@@ -303,6 +306,7 @@ nnoremap \rd :execute ':cd ' . projectroot#guess() <CR>:pwd<CR>
 set browsedir=current
 " }}}
 " Clipboard  {{{
+set clipboard=unnamedplus
 nnoremap <C-y> "+y
 vnoremap <C-y> "+y
 nnoremap <C-p> "+gP
