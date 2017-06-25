@@ -271,7 +271,7 @@ set statusline+=%{&paste?'[paste]':''}
 set statusline+=%*
 
 set statusline+=%=      "left/right separator
-set statusline+=%{fugitive#statusline()}%m%=%f[%02p%%,04l,%03v]
+set statusline+=%m%=%f[%02p%%,04l,%03v]%{fugitive#statusline()}
 set laststatus=2
 
 
