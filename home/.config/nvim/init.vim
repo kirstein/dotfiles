@@ -20,25 +20,29 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'crusoexia/vim-monokai' 
 Plug 'kylef/apiblueprint.vim'
+Plug 'hashivim/vim-terraform'
 Plug 'ap/vim-css-color'
 Plug 'flazz/vim-colorschemes'
 Plug 'digitaltoad/vim-pug'
-" Plug codi {{{
-fun! CodiFt()
-  exec ":tabnew \| Codi " . &ft
-endfunction
+Plug 'cespare/vim-toml'
+" " Plug codi {{{
+" fun! CodiFt()
+"   exec ":tabnew \| Codi " . &ft
+" endfunction
 
-nmap codi :call CodiFt()<CR>
-Plug 'metakirby5/codi.vim'
+" nmap codi :call CodiFt()<CR>
+" Plug 'metakirby5/codi.vim'
 " Plug autoformat {{{
 Plug 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR>
 " }}}
 Plug 'duggiefresh/vim-easydir'
+" Plug completion manager {{{
 Plug 'roxma/nvim-completion-manager'
 Plug 'roxma/nvim-cm-tern', {'do': 'npm install'}
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" }}}
 " Plug neoformat {{{
 Plug 'sbdchd/neoformat', { 'do': 'npm i -g esformatter js-beautify' }
 " }}}
@@ -267,7 +271,7 @@ set statusline+=%{&paste?'[paste]':''}
 set statusline+=%*
 
 set statusline+=%=      "left/right separator
-set statusline+=%{fugitive#statusline()}%m%=%f[%02p%%,04l,%03v]
+set statusline+=%m%=%f[%02p%%,04l,%03v]%{fugitive#statusline()}
 set laststatus=2
 
 
