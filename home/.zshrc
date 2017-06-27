@@ -60,6 +60,10 @@ export LANG="en_US.UTF-8"
 export PATH=$PATH:$GOPATH/bin
 export GOPATH=$HOME/go
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # Custom lambda template
 source ~/.bash/custom-lambda.zsh-theme
 source ~/.bash/zsh-autosuggestions/zsh-autosuggestions.zsh
