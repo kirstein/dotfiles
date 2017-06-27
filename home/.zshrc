@@ -53,15 +53,12 @@ LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 
 # Customize to your needs...
-export PATH=$PATH:/Library/Haskell/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/kirstein/bin:/usr/local/share/npm/bin:/Users/kirstein/.rbenv/bin:/Users/kirstein/.cabal/bin
+export PATH=$PATH:/Library/Haskell/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin:/usr/local/share/npm/bin:$HOME/.rbenv/bin:$HOME/.cabal/bin
 export LANG="en_US.UTF-8"
 
 # Go path settings
 export PATH=$PATH:$GOPATH/bin
 export GOPATH=$HOME/go
-
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
 
 # Custom lambda template
 source ~/.bash/custom-lambda.zsh-theme
@@ -94,7 +91,12 @@ export EDITOR="vim"
 export NPM_TOKEN=$(sed -n 's/.*authToken=//p' ~/.npmrc)
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
-[ -s "/Users/kirstein/.scm_breeze/scm_breeze.sh" ] && source "/Users/kirstein/.scm_breeze/scm_breeze.sh"
+[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
 eval "$(fasd --init auto)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+  export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+fi
