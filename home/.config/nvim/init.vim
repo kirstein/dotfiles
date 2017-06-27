@@ -18,20 +18,13 @@ endif
 " }}}
 " Plugs {{{
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'crusoexia/vim-monokai' 
 Plug 'kylef/apiblueprint.vim'
+Plug 'Valloric/MatchTagAlways'
 Plug 'hashivim/vim-terraform'
 Plug 'ap/vim-css-color'
-Plug 'flazz/vim-colorschemes'
+Plug 'crusoexia/vim-monokai'
 Plug 'digitaltoad/vim-pug'
 Plug 'cespare/vim-toml'
-" " Plug codi {{{
-" fun! CodiFt()
-"   exec ":tabnew \| Codi " . &ft
-" endfunction
-
-" nmap codi :call CodiFt()<CR>
-" Plug 'metakirby5/codi.vim'
 " Plug autoformat {{{
 Plug 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR>
@@ -42,21 +35,6 @@ Plug 'roxma/nvim-completion-manager'
 Plug 'roxma/nvim-cm-tern', {'do': 'npm install'}
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-" }}}
-" Plug neoformat {{{
-Plug 'sbdchd/neoformat', { 'do': 'npm i -g esformatter js-beautify' }
-" }}}
-" Plug vim-execute-ft {{{
-Plug 'kirstein/vim-execute-ft'
-let g:execute_ft_commands = {
-      \'javascript': { 'all': 'Dispatch npm test', 'single': 'Dispatch npm test -- {file}' },
-      \'ruby': { 'all': 'Rake spec test', 'single': 'Rake spec SPEC={file}' },
-      \'php': { 'all': 'Dispatch composer run test', 'single': 'Dispatch composer run test -- {file}' }
-      \}
-
-map <silent> \\ :call ExecuteByFtLast()<CR>
-map <silent> \a :call ExecuteByFT("all")<CR>
-map <silent> \t :call ExecuteByFT("single")<CR>
 " }}}
 " Plug tagbar {{{
 Plug 'majutsushi/tagbar'
@@ -71,9 +49,6 @@ let g:tagbar_indent = 4
 let g:tagbar_iconchars = [' ', ' ']
 nnoremap <leader><F4> :TagbarToggle<CR>/
 " }}}
-Plug 'dbakker/vim-projectroot'
-" Plug ranger {{{
-Plug 'francoiscabrol/ranger.vim', { 'do': 'brew install ranger' }
 " Must have deps
 Plug 'rbgrouleff/bclose.vim'
 " }}}
@@ -83,13 +58,7 @@ nmap tig :Tig!<CR>
 " }}}
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-markdown'
-Plug 'itspriddle/vim-marked'
 Plug 'editorconfig/editorconfig-vim'
-" Ctrlsf {{{
-Plug 'dyng/ctrlsf.vim'
-nmap <silent> <C-f> :CtrlSF
-let g:ctrlsf_winsize = '50%'
-" }}}
 " Plug fzf {{{
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -222,10 +191,6 @@ call plug#end()
 " }}}
 
 filetype plugin indent on
-
-" Testing helpers {{{
-
-" }}}
 
 " Statusline {{{
 "statusline setup
@@ -482,7 +447,6 @@ set ambiwidth=double
 syntax enable
 
 set cursorline
-
 colorscheme monokai
 
 highlight WordUnder ctermfg = 13
@@ -557,12 +521,12 @@ set undoreload=10000
 
 " Keep undo history across sessions by storing it in a file
 if has('persistent_undo')
-    let myUndoDir = expand(vimDir . '/undodir')
-    " Create dirs
-    call system('mkdir -p' . vimDir)
-    call system('mkdir -p' . myUndoDir)
-    let &undodir = myUndoDir
-    set undofile
+  let myUndoDir = expand(vimDir . '/undodir')
+  " Create dirs
+  call system('mkdir -p' . vimDir)
+  call system('mkdir -p' . myUndoDir)
+  let &undodir = myUndoDir
+  set undofile
 endif
 " }}}
 " Autocommands {{{
