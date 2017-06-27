@@ -44,4 +44,7 @@ function fetch_host() {
   fi
 }
 
-fetch_host
+unamestr=`uname`
+if [[ "$unamestr" == 'Darwin' ]]; then
+  fetch_host
+fi
