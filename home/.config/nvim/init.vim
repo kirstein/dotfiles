@@ -18,9 +18,9 @@ endif
 " }}}
 " Plugs {{{
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'crusoexia/vim-monokai' 
 Plug 'kylef/apiblueprint.vim'
 Plug 'ap/vim-css-color'
-Plug 'mhinz/vim-startify'
 Plug 'flazz/vim-colorschemes'
 Plug 'digitaltoad/vim-pug'
 " Plug codi {{{
