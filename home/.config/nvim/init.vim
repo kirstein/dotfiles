@@ -447,6 +447,7 @@ set ambiwidth=double
 syntax enable
 
 set cursorline
+" set termguicolors
 colorscheme monokai
 
 highlight WordUnder ctermfg = 13

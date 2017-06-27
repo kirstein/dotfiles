@@ -15,7 +15,7 @@ alias z="fasd_cd -d -i"
 # -------------------------------------------------------------------
 alias tf="terraform"
 alias vim="nvim"
-alias tmux="tmux -2 -u"
+alias tmux="tmux -u"
 alias please="sudo"
 alias bashrc=". ~/.bashrc; . ~/.zshrc; echo 'Bashrc reloaded...'"
 alias github="chromium-browser \`git remote -v | grep github.com | grep fetch | head -1 | field 2 | sed 's/git:/http:/g'\`"
