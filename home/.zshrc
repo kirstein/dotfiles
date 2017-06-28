@@ -97,10 +97,11 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
-eval "$(fasd --init auto)"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
   export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 fi
+
+eval "$(fasd --init auto)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
