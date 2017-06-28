@@ -129,6 +129,14 @@ Plug 'kana/vim-textobj-indent'
 " {{{ Plugin lexima
 Plug 'cohama/lexima.vim'
 " }}}
+" {{{ Plugin projectroot
+Plug 'dbakker/vim-projectroot'
+
+" Navigate to root `root_dir` directory
+nnoremap \rd :execute ':cd ' . projectroot#guess() <CR>:pwd<CR>
+set browsedir=current
+" }}}
+" }}}
 " Plug: Easymotion {{{
 Plug 'Lokaltog/vim-easymotion'
 map <Space> <Plug>(easymotion-s)
@@ -152,7 +160,6 @@ let g:gutentags_ctags_exclude = ['*.min', 'node_modules']
 " let g:gutentags_ctags_executable_javascript = '~/.config/nvim/scripts/jsctags.sh'
 " let g:gutentags_trace=1
 " }}}
-"Plug 'edsono/vim-matchit'
 " Plug: Ultisnips {{{
 Plug 'SirVer/ultisnips' |  Plug 'kirstein/vim-snippets'
 " c-o triggers a snippet
@@ -272,11 +279,6 @@ endfunction
 " Directory assigning {{{
 " Make PWD the current file
 nnoremap \cd :cd %:p:h<CR>:pwd<CR>
-
-" Navigate to root `root_dir` directory
-nnoremap \rd :execute ':cd ' . projectroot#guess() <CR>:pwd<CR>
-set browsedir=current
-" }}}
 " Clipboard  {{{
 set clipboard=unnamedplus
 nnoremap <C-y> "+y
