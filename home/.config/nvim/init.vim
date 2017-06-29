@@ -18,11 +18,10 @@ endif
 " }}}
 " Plugs {{{
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'kylef/apiblueprint.vim'
 Plug 'Valloric/MatchTagAlways'
 Plug 'hashivim/vim-terraform'
 Plug 'ap/vim-css-color'
-Plug 'crusoexia/vim-monokai'
+Plug 'while1eq1/vim-monokai-black'
 Plug 'digitaltoad/vim-pug'
 Plug 'cespare/vim-toml'
 " Plug autoformat {{{
@@ -120,6 +119,10 @@ Plug 'christoomey/vim-tmux-navigator'
 " Plug: Ale {{{
 Plug 'w0rp/ale'
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+let g:ale_fixers = {
+  \ 'javascript': ['eslint']
+  \ }
+nmap <leader>d <Plug>(ale_fix)
 " }}}
 " {{{ Textobjects
 Plug 'kana/vim-textobj-user'
