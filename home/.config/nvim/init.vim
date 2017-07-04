@@ -453,7 +453,7 @@ set ambiwidth=double
 syntax enable
 
 set cursorline
-set termguicolors
+" set termguicolors
 colorscheme monokai
 
 " Set utf8 as standard encoding and en_US as the standard language
