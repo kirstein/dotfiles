@@ -19,6 +19,7 @@ endif
 " Plugs {{{
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'Valloric/MatchTagAlways'
+Plug 'itchyny/vim-cursorword'
 Plug 'hashivim/vim-terraform'
 Plug 'ap/vim-css-color'
 Plug 'while1eq1/vim-monokai-black'
@@ -452,11 +453,8 @@ set ambiwidth=double
 syntax enable
 
 set cursorline
-" set termguicolors
+set termguicolors
 colorscheme monokai
-
-highlight WordUnder ctermfg = 13
-autocmd CursorMoved * exe printf('match WordUnder /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf-8
