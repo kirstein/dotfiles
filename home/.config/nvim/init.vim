@@ -22,7 +22,7 @@ Plug 'Valloric/MatchTagAlways'
 Plug 'itchyny/vim-cursorword'
 Plug 'hashivim/vim-terraform'
 Plug 'ap/vim-css-color'
-Plug 'while1eq1/vim-monokai-black'
+Plug 'sickill/vim-monokai'
 Plug 'digitaltoad/vim-pug'
 Plug 'cespare/vim-toml'
 " Plug autoformat {{{
@@ -453,7 +453,7 @@ set ambiwidth=double
 syntax enable
 
 set cursorline
-set termguicolors
+" set termguicolors
 colorscheme monokai
 
 " Set utf8 as standard encoding and en_US as the standard language
