@@ -22,7 +22,8 @@ Plug 'Valloric/MatchTagAlways'
 Plug 'itchyny/vim-cursorword'
 Plug 'hashivim/vim-terraform'
 Plug 'ap/vim-css-color'
-Plug 'sickill/vim-monokai'
+" Plug 'sickill/vim-monokai'
+Plug 'gosukiwi/vim-atom-dark'
 Plug 'digitaltoad/vim-pug'
 Plug 'cespare/vim-toml'
 " Plug autoformat {{{
@@ -250,8 +251,6 @@ set statusline+=%=      "left/right separator
 set statusline+=%m%=%f[%02p%%,04l,%03v]%{fugitive#statusline()}
 set laststatus=2
 
-
-
 "recalculate the tab warning flag when idle and after writing
 autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
 
@@ -284,7 +283,7 @@ endfunction
 " Make PWD the current file
 nnoremap \cd :cd %:p:h<CR>:pwd<CR>
 " Clipboard  {{{
-set clipboard=unnamedplus
+set clipboard=unnamed
 nnoremap <C-y> "+y
 vnoremap <C-y> "+y
 nnoremap <C-p> "+gP
@@ -300,8 +299,8 @@ set foldnestmax=4
 nnoremap <Leader>z zMzAzz
 " }}}
 " Bash helpers {{{
-
 " General {{{
+nnoremap <Leader>cc :%s/\<<C-r><C-w>\>/<C-r><C-w>/g
 map <silent> <C-c>j :wincmd j<CR>:bd<CR>
 map <silent> nl :lnext<CR>
 map <silent> nl :lnext<CR>
@@ -454,7 +453,7 @@ syntax enable
 
 set cursorline
 " set termguicolors
-colorscheme monokai
+colorscheme atom-dark-256
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf-8
