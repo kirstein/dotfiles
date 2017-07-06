@@ -300,7 +300,7 @@ nnoremap <Leader>z zMzAzz
 " }}}
 " Bash helpers {{{
 " General {{{
-nnoremap <Leader>cc :%s/\<<C-r><C-w>\>/<C-r><C-w>/g
+nnoremap <silent> <Leader>cc :vimgrep /<C-r><C-w>/ %<CR>``:cw<CR>
 map <silent> <C-c>j :wincmd j<CR>:bd<CR>
 map <silent> nl :lnext<CR>
 map <silent> nl :lnext<CR>
