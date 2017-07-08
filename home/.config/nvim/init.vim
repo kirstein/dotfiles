@@ -22,11 +22,11 @@ Plug 'itchyny/vim-cursorword' " underline word under cursor
 Plug 'gosukiwi/vim-atom-dark' " atom theme
 Plug 'digitaltoad/vim-pug' " pug or jade templating language
 Plug 'duggiefresh/vim-easydir' " allow creating directories with edit
-Plug 'airblade/vim-gitgutter' " show git gutter tags 
+Plug 'airblade/vim-gitgutter' " show git gutter tags
 Plug 'tpope/vim-markdown' " markdown support
 Plug 'editorconfig/editorconfig-vim' " editorconfig support
 Plug 'christoomey/vim-tmux-navigator' " simplify navigating between tmux and vim
-Plug 'cohama/lexima.vim' " auto close parentheses 
+Plug 'cohama/lexima.vim' " auto close parentheses
 Plug 'moll/vim-node' " better node support for vim
 Plug 'kshenoy/vim-signature' " show marks on left pane
 Plug 'tpope/vim-commentary' " gcc to comment out lines
@@ -119,11 +119,6 @@ let g:ale_fixers = {
   \ }
 nmap <leader>d <Plug>(ale_fix)
 " }}}
-" " {{{ Textobjects
-" Plug 'kana/vim-textobj-user'
-" Plug 'coderifous/textobj-word-column.vim'
-" Plug 'kana/vim-textobj-indent'
-" " }}}
 " {{{ Plugin projectroot
 Plug 'dbakker/vim-projectroot'
 
@@ -242,7 +237,6 @@ set foldlevelstart=100
 set foldnestmax=4
 nnoremap <Leader>z zMzAzz
 " }}}
-" Bash helpers {{{
 " General {{{
 nnoremap <silent> <Leader>cc :vimgrep /<C-r><C-w>/ %<CR>``:cw<CR>
 map <silent> nl :lnext<CR>
