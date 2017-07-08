@@ -206,9 +206,7 @@ set statusline+=%#identifier#
 set statusline+=%m
 set statusline+=%*
 
-"display a warning if &et is wrong, or we have mixed-indenting
 set statusline+=%#error#
-set statusline+=%{StatuslineTabWarning()}
 set statusline+=%*
 
 set statusline+=%#warningmsg#
@@ -223,38 +221,11 @@ set statusline+=%*
 set statusline+=%=      "left/right separator
 set statusline+=%m%=%f[%02p%%,04l,%03v]%{fugitive#statusline()}
 set laststatus=2
-
-"recalculate the tab warning flag when idle and after writing
-autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
-
-"return '[&et]' if &et is set wrong
-"return '[mixed-indenting]' if spaces and tabs are used to indent
-"return an empty string if everything is fine
-function! StatuslineTabWarning()
-  if !exists("b:statusline_tab_warning")
-    let b:statusline_tab_warning = ''
-
-    if !&modifiable
-      return b:statusline_tab_warning
-    endif
-
-    let tabs = search('^\t', 'nw') != 0
-
-    "find spaces that arent used as alignment in the first indent column
-    let spaces = search('^ \{' . &ts . ',}[^\t]', 'nw') != 0
-
-    if tabs && spaces
-      let b:statusline_tab_warning =  '[mixed-indenting]'
-    elseif (spaces && !&et) || (tabs && &et)
-      let b:statusline_tab_warning = '[&et]'
-    endif
-  endif
-  return b:statusline_tab_warning
-endfunction
 " }}}
 " Directory assigning {{{
 " Make PWD the current file
 nnoremap \cd :cd %:p:h<CR>:pwd<CR>
+" }}}
 " Clipboard  {{{
 set clipboard=unnamed
 nnoremap <C-y> "+y
@@ -274,7 +245,6 @@ nnoremap <Leader>z zMzAzz
 " Bash helpers {{{
 " General {{{
 nnoremap <silent> <Leader>cc :vimgrep /<C-r><C-w>/ %<CR>``:cw<CR>
-map <silent> <C-c>j :wincmd j<CR>:bd<CR>
 map <silent> nl :lnext<CR>
 map <silent> nl :lnext<CR>
 " Give access to mouse support
@@ -349,13 +319,9 @@ set path+=**
 " Open locationlist
 nnoremap <silent> <Leader>l :lopen<CR>
 
-" Display the last search in quickfix window
-nnoremap <silent> <Leader>/ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
-
 map nvim :e ~/.config/nvim/init.vim<CR>
 " }}}
 " Window / pane movements {{{
-" Easy window navigation {{{
 if has('nvim')
   nmap <bs> <C-w>h
 else
@@ -364,7 +330,6 @@ endif
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-" }}}
 " }}}
 " VIM user interface {{{
 " Set 7 lines to the cursor - when moving vertically using j/k
@@ -489,7 +454,6 @@ set listchars=tab:▸\ ,eol:¬,trail:.
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 " }}}
-
 " Global undo list {{{
 let vimDir = '$HOME/.config/nvim'
 set undolevels=1000
@@ -512,15 +476,6 @@ autocmd FileType ruby,python,javascript,coffee,vim autocmd BufWritePre <buffer> 
 " Remove trailing whitespaces when dealing with certain languages  {{{
 autocmd FileType ruby,python,javascript,coffee,markdown autocmd BufWritePre <buffer> :%s/ \+$//ge
 " " }}}
-" Reload vimrc config each time its saved {{{
-augroup myvimrc
-  au!
-  au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc,~/.config/nvim/init.vim so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
-augroup END
-" }}}
-" Replace highlight line when insert and vice versa {{{
-autocmd InsertEnter,InsertLeave * set cul!
-" }}}
 " Show trailing whitespaces {{{
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -531,31 +486,6 @@ autocmd BufWinLeave * call clearmatches()
 " }}}
 " }}}
 " Custom functions {{{
-" Zoom in given pane {{{
-func! s:zoom_toggle() abort
-  if 1 == winnr('$')
-    return
-  endif
-  let restore_cmd = winrestcmd()
-  wincmd |
-  wincmd _
-  " If the layout did not change, it's a toggle (un-zoom).
-  if restore_cmd ==# winrestcmd()
-    exe t:zoom_restore
-  else
-    let t:zoom_restore = restore_cmd
-  endif
-  return '<Nop>'
-endfunc
-func! s:zoom_or_goto_column(cnt) abort
-  if a:cnt
-    exe 'norm! '.v:count.'|'
-  else
-    call s:zoom_toggle()
-  endif
-endfunc
-nnoremap + :<C-U>call <SID>zoom_or_goto_column(v:count)<CR>
-" }}}
 " Open the first matching variable with require statement {{{
 nmap <silent> gw :call OpenFirstRequire()<CR>
 function! OpenFirstRequire()
@@ -582,43 +512,6 @@ function! OpenFirstRequire()
     endif
     let l:lnr = l:lnr + 1
   endwhile
-endfunction
-" }}}
-" Duplicate line under cursor {{{
-nmap <silent> <Leader>dd :call DupLine()<CR>
-
-function! ToggleNumbers()
-  set relativenumber!
-  set number!
-endfunction
-
-nmap <silent> con :call ToggleNumbers()<CR>
-
-" Duplicate the current line and keep the cursor as it was
-function! DupLine()
-  let a:cursor_pos = getpos(".")
-  :t.
-  call cursor(getpos('.')[1], a:cursor_pos[2])
-endfunction
-" }}}
-" Turn implicit return into a function {{{
-function! FuckImplicitReturn()
-  normal! $T>
-  normal! vf)
-  normal! "pd
-  execute "normal! i {\<CR>\<CR>}"
-  normal! kireturn
-  normal! "pp$i;
-  normal! ==
-endfunction
-" }}}
-" Turn a function into a implicit return {{{
-function! HelloImplicitReturn()
-  normal! ^dwvt;"p
-  execute "normal! \<esc>"
-  normal! di}
-  execute "normal! k\<S-j>hdf}"
-  normal! 2h"pplx
 endfunction
 " }}}
 " Wrap stuff to console.time {{{
