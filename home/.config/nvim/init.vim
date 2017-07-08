@@ -18,19 +18,28 @@ endif
 " }}}
 " Plugs {{{
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'Valloric/MatchTagAlways'
-Plug 'itchyny/vim-cursorword'
-Plug 'hashivim/vim-terraform'
-Plug 'ap/vim-css-color'
-" Plug 'sickill/vim-monokai'
-Plug 'gosukiwi/vim-atom-dark'
-Plug 'digitaltoad/vim-pug'
-Plug 'cespare/vim-toml'
+Plug 'itchyny/vim-cursorword' " underline word under cursor
+Plug 'gosukiwi/vim-atom-dark' " atom theme
+Plug 'digitaltoad/vim-pug' " pug or jade templating language
+Plug 'duggiefresh/vim-easydir' " allow creating directories with edit
+Plug 'airblade/vim-gitgutter' " show git gutter tags 
+Plug 'tpope/vim-markdown' " markdown support
+Plug 'editorconfig/editorconfig-vim' " editorconfig support
+Plug 'christoomey/vim-tmux-navigator' " simplify navigating between tmux and vim
+Plug 'cohama/lexima.vim' " auto close parentheses 
+Plug 'moll/vim-node' " better node support for vim
+Plug 'kshenoy/vim-signature' " show marks on left pane
+Plug 'tpope/vim-commentary' " gcc to comment out lines
+Plug 'tpope/vim-eunuch' " linux helpers for vim :Rename etc
+Plug 'tpope/vim-surround' " cs ds for surrounding tags
+Plug 'tpope/vim-unimpaired' " basic toggling options
+Plug 'tpope/vim-vinegar' " make netrw great again
+Plug 'thinca/vim-visualstar' " better visual selection through *
+Plug 'mustache/vim-mustache-handlebars' " mustache handlebars template helpers
 " Plug autoformat {{{
 Plug 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR>
 " }}}
-Plug 'duggiefresh/vim-easydir'
 " Plug completion manager {{{
 Plug 'roxma/nvim-completion-manager'
 Plug 'roxma/nvim-cm-tern', {'do': 'npm install'}
@@ -50,16 +59,10 @@ let g:tagbar_indent = 4
 let g:tagbar_iconchars = [' ', ' ']
 nnoremap <leader><F4> :TagbarToggle<CR>/
 " }}}
-" Must have deps
-Plug 'rbgrouleff/bclose.vim'
-" }}}
 " Plug tig {{{
 Plug 'codeindulgence/vim-tig'
 nmap tig :Tig!<CR>
 " }}}
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-markdown'
-Plug 'editorconfig/editorconfig-vim'
 " Plug fzf {{{
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -108,17 +111,7 @@ command! FASD call fzf#run(fzf#wrap({'source': 'fasd -al', 'options': '--no-sort
 nnoremap <silent> /z :FASD<CR>
 " }}}
 " }}}
-Plug 'mattn/emmet-vim'
-Plug 'mattn/webapi-vim'
-" Plug: Gist {{{
-Plug 'mattn/gist-vim'
-let g:gist_clip_command = 'pbcopy'
-let g:gist_detect_filetype = 1
-let g:gist_post_private = 1
-let g:gist_show_privates = 1
-" }}}
-Plug 'christoomey/vim-tmux-navigator'
-" Plug: Ale {{{
+" Plug: ale {{{
 Plug 'w0rp/ale'
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 let g:ale_fixers = {
@@ -126,14 +119,11 @@ let g:ale_fixers = {
   \ }
 nmap <leader>d <Plug>(ale_fix)
 " }}}
-" {{{ Textobjects
-Plug 'kana/vim-textobj-user'
-Plug 'coderifous/textobj-word-column.vim'
-Plug 'kana/vim-textobj-indent'
-" }}}
-" {{{ Plugin lexima
-Plug 'cohama/lexima.vim'
-" }}}
+" " {{{ Textobjects
+" Plug 'kana/vim-textobj-user'
+" Plug 'coderifous/textobj-word-column.vim'
+" Plug 'kana/vim-textobj-indent'
+" " }}}
 " {{{ Plugin projectroot
 Plug 'dbakker/vim-projectroot'
 
@@ -141,8 +131,7 @@ Plug 'dbakker/vim-projectroot'
 nnoremap \rd :execute ':cd ' . projectroot#guess() <CR>:pwd<CR>
 set browsedir=current
 " }}}
-" }}}
-" Plug: Easymotion {{{
+" Plug: easymotion {{{
 Plug 'Lokaltog/vim-easymotion'
 map <Space> <Plug>(easymotion-s)
 let g:EasyMotion_use_smartsign_us = 1
@@ -152,20 +141,18 @@ let g:EasyMotion_smartcase = 1
 map /j <Plug>(easymotion-j)
 map /k <Plug>(easymotion-k)
 " }}}
-Plug 'airblade/vim-gitgutter'
-" Plug: JavaScript {{{
+" Plug: javaScript {{{
 Plug 'pangloss/vim-javascript'
 let g:javascript_plugin_jsdoc = 1
 " }}}
-Plug 'moll/vim-node'
-" Gutentags {{{
+" gutentags {{{
 Plug 'ludovicchabant/vim-gutentags'
 set tags=./tags;,tags;
 let g:gutentags_ctags_exclude = ['*.min', 'node_modules']
 " let g:gutentags_ctags_executable_javascript = '~/.config/nvim/scripts/jsctags.sh'
 " let g:gutentags_trace=1
 " }}}
-" Plug: Ultisnips {{{
+" Plug: ultisnips {{{
 Plug 'SirVer/ultisnips' |  Plug 'kirstein/vim-snippets'
 " c-o triggers a snippet
 let g:UltiSnipsExpandTrigger="<c-o>"
@@ -178,27 +165,13 @@ if isdirectory(snipsDir)
 else
 endif
 " }}}
-Plug 'kshenoy/vim-signature'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-commentary'
-" Plug: Fugitive {{{
+" Plug: fugitive {{{
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
 nmap <Leader>gb :Gblame<CR>
 nmap <Leader>gw :Gwrite<CR>
 nmap <Leader>gc :Gcommit -m
 nmap <Leader>gp :Gpush
 " }}}
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-vinegar'
-Plug 'thinca/vim-visualstar'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'mxw/vim-jsx'
-Plug 'wellle/targets.vim'
 call plug#end()
 " }}}
 

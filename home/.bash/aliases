@@ -1,11 +1,6 @@
 alias awesome="echo you are awesome"
 
 # -------------------------------------------------------------------
-# Noglob
-# -------------------------------------------------------------------
-alias bower='noglob bower'
-
-# -------------------------------------------------------------------
 # Fasd
 # -------------------------------------------------------------------
 alias z="fasd_cd -d -i"
@@ -18,30 +13,25 @@ alias vim="nvim"
 alias tmux="tmux -u"
 alias please="sudo"
 alias bashrc=". ~/.bashrc; . ~/.zshrc; echo 'Bashrc reloaded...'"
-alias github="chromium-browser \`git remote -v | grep github.com | grep fetch | head -1 | field 2 | sed 's/git:/http:/g'\`"
 alias fuck='eval $(thefuck $(fc -ln -1))'
 alias ra='ranger'
+alias weather='curl -4 http://wttr.in/Tallinn'
 
 # -------------------------------------------------------------------
 # osx only
 # -------------------------------------------------------------------
-
 alias chromium-browser="open -a Google\ Chrome\ Canary.app"
 
 # -------------------------------------------------------------------
 # System aliases
 # -------------------------------------------------------------------
-
 alias h="history"
-# alias ls='ls -aF'               # Always add colors and file type extensions
 alias ports="lsof -i -n -P"       # Show ports information
 alias grep='grep --color=auto'    # Always colored grep
-# alias ll='ls -la'
 
 # -------------------------------------------------------------------
 # OTHER aliases
 # -------------------------------------------------------------------
-
 # Display the battery information
 alias battery="~/.bash/battery/battery"
 alias cl="clear"            # Clear
@@ -50,11 +40,3 @@ alias j="jobs -p"           # All jobs + progresses
 alias bc='bc -l'            # Calculator
 alias pa="ps aux"           # Ps aux
 alias pag="ps aux | grep"   # Ps aux grep
-
-# -------------------------------------------------------------------
-# Ant aliases
-# -------------------------------------------------------------------
-alias iant='ant -Dproject.qualifier=-SNAPSHOT'
-
-alias rake_db_migrate='rake db:migrate && rake db:migrate RAILS_ENV=test'
-alias wl='wunderline'
