@@ -19,7 +19,7 @@ endif
 " Plugs {{{
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'itchyny/vim-cursorword' " underline word under cursor
-Plug 'gosukiwi/vim-atom-dark' " atom theme
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'digitaltoad/vim-pug' " pug or jade templating language
 Plug 'duggiefresh/vim-easydir' " allow creating directories with edit
 Plug 'airblade/vim-gitgutter' " show git gutter tags
@@ -385,7 +385,7 @@ syntax enable
 
 set cursorline
 " set termguicolors
-colorscheme atom-dark-256
+colorscheme onehalfdark
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf-8
