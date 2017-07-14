@@ -16,3 +16,6 @@
 [submodule "home/.bash/zsh-autosuggestions"]
 	path = home/.bash/zsh-autosuggestions
 	url = git://github.com/zsh-users/zsh-autosuggestions
+[submodule "home/.bash/dasht"]
+	path = home/.bash/dasht
+	url = git@github.com:sunaku/dasht.git

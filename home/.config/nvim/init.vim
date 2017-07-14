@@ -36,13 +36,14 @@ Plug 'tpope/vim-unimpaired' " basic toggling options
 Plug 'tpope/vim-vinegar' " make netrw great again
 Plug 'thinca/vim-visualstar' " better visual selection through *
 Plug 'mustache/vim-mustache-handlebars' " mustache handlebars template helpers
+Plug 'tpope/vim-repeat' " make repeat great again. Helps repeat all tpope libs
 " Plug autoformat {{{
 Plug 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR>
 " }}}
 " Plug completion manager {{{
 Plug 'roxma/nvim-completion-manager'
-Plug 'roxma/nvim-cm-tern', {'do': 'npm install'}
+Plug 'roxma/nvim-cm-tern', {'do': 'npm install -g tern && npm install'}
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " }}}
@@ -480,6 +481,23 @@ autocmd BufWinLeave * call clearmatches()
 " }}}
 " }}}
 " Custom functions {{{
+" Duplicate line under cursor {{{
+nmap <silent> <Leader>dd :call DupLine()<CR>
+
+function! ToggleNumbers()
+  set relativenumber!
+  set number!
+endfunction
+
+nmap <silent> con :call ToggleNumbers()<CR>
+
+" Duplicate the current line and keep the cursor as it was
+function! DupLine()
+  let a:cursor_pos = getpos(".")
+  :t.
+  call cursor(getpos('.')[1], a:cursor_pos[2])
+endfunction
+" }}}
 " Open the first matching variable with require statement {{{
 nmap <silent> gw :call OpenFirstRequire()<CR>
 function! OpenFirstRequire()
