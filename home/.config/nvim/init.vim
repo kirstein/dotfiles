@@ -19,6 +19,7 @@ endif
 " Plugs {{{
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'itchyny/vim-cursorword' " underline word under cursor
+Plug 'fatih/vim-go' " go support
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'digitaltoad/vim-pug' " pug or jade templating language
 Plug 'duggiefresh/vim-easydir' " allow creating directories with edit
@@ -539,6 +540,14 @@ fun! ConsoleTime() range
     exe "normal! o\<CR>".start
     normal! `<
   endif
+endfunction
+" }}}
+" Turn normal fn to coroutine {{{
+fun! Co() range
+  normal! 0dwiconst 
+  normal! f(i = Promise.coroutine(function * 
+  normal! f{%a);
+  normal! ``
 endfunction
 " }}}
 " }}}

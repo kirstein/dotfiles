@@ -118,3 +118,7 @@ function zv() {
 }
 
 alias cabalupgrades="cabal list --installed  | egrep -iv '(synopsis|homepage|license)'"
+
+vimg() {
+  vim $(ag -l "$@")
+}
