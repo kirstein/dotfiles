@@ -224,7 +224,7 @@ set laststatus=2
 nnoremap \cd :cd %:p:h<CR>:pwd<CR>
 " }}}
 " Clipboard  {{{
-set clipboard=unnamed
+" set clipboard=unnamed
 nnoremap <C-y> "+y
 vnoremap <C-y> "+y
 nnoremap <C-p> "+gP
@@ -299,6 +299,9 @@ set hidden
 " map @q to Q, quicker macros
 " Used recursive mapping because of vim bekaboo
 nmap Q @q
+
+" run macro on visually selected lines
+xnoremap Q :normal @q <CR>
 
 " Toggle f2 as paste mode
 set pastetoggle=<F2>
