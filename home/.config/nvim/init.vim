@@ -19,12 +19,37 @@ endif
 " Plugs {{{
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'itchyny/vim-cursorword' " underline word under cursor
-Plug 'fatih/vim-go' " go support
+" Plug gist {{{
+Plug 'mattn/webapi-vim' " gist webapi
+Plug 'mattn/gist-vim' " gist
+let g:gist_post_private = 1
+" }}}
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' } " go compl
+" Plug vim-go {{{
+" Plug 'fatih/vim-go' " go support
+fun! GoRunWrapper()
+  execute "GoRun"
+  exe "normal! \<esc>"
+endfunction
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>i :GoImport 
+
+let g:go_snippet_engine = "neosnippet"
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:go_term_mode = "split"
+let g:go_term_enabled = 1
+" }}}
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
-Plug 'digitaltoad/vim-pug' " pug or jade templating language
+Plug 'sheerun/vim-polyglot' " language based plugins
+" Plug 'digitaltoad/vim-pug' " pug or jade templating language
 Plug 'duggiefresh/vim-easydir' " allow creating directories with edit
 Plug 'airblade/vim-gitgutter' " show git gutter tags
-Plug 'tpope/vim-markdown' " markdown support
+" Plug 'tpope/vim-markdown' " markdown support
 Plug 'editorconfig/editorconfig-vim' " editorconfig support
 Plug 'christoomey/vim-tmux-navigator' " simplify navigating between tmux and vim
 Plug 'cohama/lexima.vim' " auto close parentheses
@@ -116,8 +141,12 @@ nnoremap <silent> /z :FASD<CR>
 " Plug: ale {{{
 Plug 'w0rp/ale'
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
-let g:ale_fixers = {
+let g:ale_linters = {
+  \ 'go': ['gometalinter', 'gofmt'],
   \ 'javascript': ['eslint']
+  \}
+let g:ale_fixers = {
+  \ 'javascript': ['eslint'],
   \ }
 nmap <leader>d <Plug>(ale_fix)
 " }}}
