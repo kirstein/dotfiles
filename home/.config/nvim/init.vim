@@ -44,12 +44,10 @@ let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_term_mode = "split"
 let g:go_term_enabled = 1
 " }}}
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'sonph/onehalf', {'rtp': 'vim/'} " vim theme
 Plug 'sheerun/vim-polyglot' " language based plugins
-" Plug 'digitaltoad/vim-pug' " pug or jade templating language
 Plug 'duggiefresh/vim-easydir' " allow creating directories with edit
 Plug 'airblade/vim-gitgutter' " show git gutter tags
-" Plug 'tpope/vim-markdown' " markdown support
 Plug 'editorconfig/editorconfig-vim' " editorconfig support
 Plug 'christoomey/vim-tmux-navigator' " simplify navigating between tmux and vim
 Plug 'cohama/lexima.vim' " auto close parentheses
@@ -72,6 +70,13 @@ Plug 'roxma/nvim-completion-manager'
 Plug 'roxma/nvim-cm-tern', {'do': 'npm install -g tern && npm install'}
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" }}}
+" Plug python {{{
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'roxma/python-support.nvim'
+let g:python_support_python3_requirements = get(g:,'python_support_python3_requirements',[]) + ['flake8', 'jedi']
+let g:python_support_python2_requirements = get(g:,'python_support_python2_requirements',[]) + ['flake8', 'jedi']
+let g:pymode_python = 'python3'
 " }}}
 " Plug tagbar {{{
 Plug 'majutsushi/tagbar'

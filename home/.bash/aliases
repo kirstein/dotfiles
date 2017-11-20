@@ -16,6 +16,7 @@ alias bashrc=". ~/.bashrc; . ~/.zshrc; echo 'Bashrc reloaded...'"
 alias fuck='eval $(thefuck $(fc -ln -1))'
 alias ra='ranger'
 alias weather='curl -4 http://wttr.in/Tallinn'
+alias av='source ./venv/bin/activate'
 
 # -------------------------------------------------------------------
 # osx only
