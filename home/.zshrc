@@ -95,7 +95,6 @@ load-nvmrc
 export PATH="/usr/local/sbin:$PATH"
 export EDITOR="vim"
 
-export NPM_TOKEN=$(sed -n 's/.*authToken=//p' ~/.npmrc)
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
@@ -115,4 +114,5 @@ eval "$(fasd --init auto)"
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /home/kolmas/.nvm/versions/node/v6.10.3/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/kolmas/.nvm/versions/node/v6.10.3/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+
 export PATH="/home/linuxbrew/.linuxbrew/sbin:$PATH"
