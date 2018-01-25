@@ -1,21 +1,9 @@
 [submodule "home/.bash/oh-my-zsh"]
 	path = home/.bash/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "home/.bash/k"]
-	path = home/.bash/k
-	url = git@github.com:supercrabtree/k.git
 [submodule "home/.bash/battery"]
 	path = home/.bash/battery
 	url = https://github.com/Goles/Battery.git
-[submodule "home/yeoman-zsh"]
-	path = home/yeoman-zsh
-	url = https://github.com/edouard-lopez/yeoman-zsh-plugin.git
-[submodule "zsh-autosuggestions"]
-	path = zsh-autosuggestions
-	url = git://github.com/zsh-users/zsh-autosuggestions
 [submodule "home/.bash/zsh-autosuggestions"]
 	path = home/.bash/zsh-autosuggestions
 	url = git://github.com/zsh-users/zsh-autosuggestions
-[submodule "home/.bash/dasht"]
-	path = home/.bash/dasht
-	url = git@github.com:sunaku/dasht.git

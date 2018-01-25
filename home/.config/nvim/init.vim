@@ -60,6 +60,7 @@ Plug 'tpope/vim-surround' " cs ds for surrounding tags
 Plug 'tpope/vim-unimpaired' " basic toggling options
 Plug 'tpope/vim-vinegar' " make netrw great again
 Plug 'thinca/vim-visualstar' " better visual selection through *
+Plug 'pearofducks/ansible-vim' " ansible support
 Plug 'mustache/vim-mustache-handlebars' " mustache handlebars template helpers
 Plug 'tpope/vim-repeat' " make repeat great again. Helps repeat all tpope libs
 " Plug autoformat {{{

@@ -62,7 +62,6 @@ export GOPATH=$HOME/go
 
 export PATH=$PATH:~/.bash/dasht/bin
 
-# NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
@@ -95,7 +94,6 @@ load-nvmrc
 export PATH="/usr/local/sbin:$PATH"
 export EDITOR="vim"
 
-export NPM_TOKEN=$(sed -n 's/.*authToken=//p' ~/.npmrc)
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
