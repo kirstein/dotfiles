@@ -46,6 +46,7 @@ let g:go_term_enabled = 1
 " }}}
 Plug 'sonph/onehalf', {'rtp': 'vim/'} " vim theme
 Plug 'sheerun/vim-polyglot' " language based plugins
+Plug 'othree/html5.vim'
 Plug 'duggiefresh/vim-easydir' " allow creating directories with edit
 Plug 'airblade/vim-gitgutter' " show git gutter tags
 Plug 'editorconfig/editorconfig-vim' " editorconfig support
@@ -270,7 +271,7 @@ set nofoldenable
 set foldmethod=indent
 " set foldmarker={,}
 set foldlevelstart=100
-set foldnestmax=4
+set foldnestmax=20
 nnoremap <Leader>z zMzAzz
 " }}}
 " General {{{

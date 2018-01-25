@@ -122,3 +122,7 @@ alias cabalupgrades="cabal list --installed  | egrep -iv '(synopsis|homepage|lic
 vimg() {
   vim $(ag -l "$@")
 }
+
+ec2() {
+  aws ec2 describe-instances --filters "Name=tag:Service,Values=$@" --query 'Reservations[].Instances[]' --output json | jq -r 'map({ private: .PrivateIpAddress, public: .PublicIpAddress, tags: .Tags}) | map(select(.private | length > 0))'
+}
