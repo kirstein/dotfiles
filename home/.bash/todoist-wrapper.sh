@@ -1,4 +1,4 @@
-#!/bin/zsh -f
+#!/bin/bash
 
 function trim(){
   # remove leading whitespace characters
@@ -47,7 +47,7 @@ case "$1" in
     ;;
 
   "c"|"close")
-    local issue=$(list | fzf)
+    issue=$(list | fzf)
     if [[ -z $issue ]]; then
       return
     fi
@@ -56,7 +56,7 @@ case "$1" in
     ;;
 
   "d"|"del")
-    local issue=$(list | fzf)
+    issue=$(list | fzf)
     if [[ -z $issue ]]; then
       return
     fi
@@ -69,8 +69,8 @@ case "$1" in
       echo "missing todoist item title"
       return
     fi
-    local priority=$(prios | fzf)
-    local project=$(todoist projects | fzf)
+    priority=$(prios | fzf)
+    project=$(todoist projects | fzf)
     if [[ -z $priority || -z $project ]]; then
       return
     fi
@@ -80,8 +80,8 @@ case "$1" in
     ;;
 
   "p"|"prio")
-    local issue=$(list | fzf)
-    local priority=$(prios | fzf)
+    issue=$(list | fzf)
+    priority=$(prios | fzf)
     if [[ -z $priority || -z $issue ]]; then
       return
     fi
@@ -90,11 +90,11 @@ case "$1" in
     ;;
 
   "s"|"session")
-    local project=$(sessions | fzf)
+    project=$(sessions | fzf)
     if [[ -z $project ]]; then
       return
     fi
-    local key=$(echo $project | awk '{print $1}')
+    key=$(echo $project | awk '{print $1}')
     if [[ $key == 'NULL' ]]; then
       echo "[SESSION UNSET]"
       setsession ""
@@ -105,7 +105,7 @@ case "$1" in
     ;;
 
   "show")
-    local issue=$(list | fzf)
+    issue=$(list | fzf)
     if [[ -z $issue ]]; then
       return
     fi
@@ -116,8 +116,8 @@ case "$1" in
     if [ -z $SESSION ]; then
       return
     fi
-    local project=${$(echo $SESSION | awk '{print $2}')#?}
-    local active=$(trim $(list | grep $project | head -n1))
+    project=$(echo $SESSION | awk '{print $2}' | sed 's/^.//')
+    active=$(trim $(list | grep $project | head -n1))
     echo $(echo $active | cut -d' ' -f4- | awk '{ print tolower($0) }')
     ;;
 
