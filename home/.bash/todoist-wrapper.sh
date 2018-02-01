@@ -104,6 +104,14 @@ case "$1" in
     fi
     ;;
 
+  "ls")
+    if [ -z $SESSION ]; then
+      return
+    fi
+    project=$(echo $SESSION | awk '{print $2}' | sed 's/^.//')
+    echo $(list | grep $project |fzf)
+    ;;
+
   "show")
     issue=$(list | fzf)
     if [[ -z $issue ]]; then
