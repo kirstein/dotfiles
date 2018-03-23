@@ -45,6 +45,7 @@ let g:go_term_mode = "split"
 let g:go_term_enabled = 1
 " }}}
 Plug 'sonph/onehalf', {'rtp': 'vim/'} " vim theme
+Plug 'tpope/vim-rhubarb'
 Plug 'sheerun/vim-polyglot' " language based plugins
 Plug 'othree/html5.vim'
 Plug 'duggiefresh/vim-easydir' " allow creating directories with edit
@@ -66,6 +67,9 @@ Plug 'tpope/vim-repeat' " make repeat great again. Helps repeat all tpope libs
 " Plug autoformat {{{
 Plug 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR>
+" }}}
+" Tern support general {{{
+Plug 'ternjs/tern_for_vim', { 'do': 'cd ~/.local/share/nvim/plugged/tern_for_vim && npm install && npm install -g git+https://github.com/ramitos/jsctags.git' }
 " }}}
 " Plug completion manager {{{
 Plug 'roxma/nvim-completion-manager'
@@ -91,7 +95,6 @@ let g:tagbar_width = 60
 let g:tagbar_compact = 1
 let g:tagbar_indent = 4
 let g:tagbar_iconchars = [' ', ' ']
-nnoremap <leader><F4> :TagbarToggle<CR>/
 " }}}
 " Plug tig {{{
 Plug 'codeindulgence/vim-tig'
@@ -125,7 +128,9 @@ nnoremap /f :FZFAgIn %:p:h<CR>
 nnoremap /d :FZFProjectFiles<CR>
 nnoremap /a :Files %:p:h<CR>
 nnoremap /s :Files<CR>
-nnoremap /x :Tags<CR>
+nnoremap /x :Tags <C-R><C-W>
+nnoremap /n :Marks<CR>
+nnoremap /c :BTags <C-R><C-W>
 nnoremap /b :Buffers<CR>
 nnoremap /m :History<CR>
 nmap <Leader>gs :GFiles?<CR>
