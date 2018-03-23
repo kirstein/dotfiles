@@ -147,14 +147,29 @@ nnoremap <silent> /z :FASD<CR>
 " }}}
 " Plug: ale {{{
 Plug 'w0rp/ale'
+
+function! LinterStatus() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+
+  return l:counts.total == 0 ? 'OK' : printf(
+  \   '%dW %dE',
+  \   all_non_errors,
+  \   all_errors
+  \)
+endfunction
+
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 let g:ale_linters = {
   \ 'go': ['gometalinter', 'gofmt'],
-  \ 'javascript': ['eslint']
+  \ 'javascript': ['standard']
   \}
 let g:ale_fixers = {
-  \ 'javascript': ['eslint'],
+  \ 'javascript': ['standard'],
   \ }
+let g:ale_fix_on_save = 1
 nmap <leader>d <Plug>(ale_fix)
 " }}}
 " {{{ Plugin projectroot
@@ -243,7 +258,7 @@ set statusline+=%#error#
 set statusline+=%*
 
 set statusline+=%#warningmsg#
-set statusline+=%{ALEGetStatusLine()}
+set statusline+=%{LinterStatus()}
 set statusline+=%*
 
 "display a warning if &paste is set
@@ -376,6 +391,7 @@ set wildmode=longest:full,full
 
 " " Ignore compiled files
 set wildignore=.git,*/tmp,**/node_modules/**,*/node_modules
+set wildignorecase
 
 "Always show current position
 set ruler
@@ -509,7 +525,7 @@ endif
 autocmd FileType ruby,python,javascript,coffee,vim autocmd BufWritePre <buffer> match ErrorMsg '\%>100v.\+'
 " }}}
 " Remove trailing whitespaces when dealing with certain languages  {{{
-autocmd FileType ruby,python,javascript,coffee,markdown autocmd BufWritePre <buffer> :%s/ \+$//ge
+autocmd FileType ruby,python,javascript,coffee autocmd BufWritePre <buffer> :%s/ \+$//ge
 " " }}}
 " Show trailing whitespaces {{{
 highlight ExtraWhitespace ctermbg=red guibg=red

@@ -53,7 +53,7 @@ LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 
 # Customize to your needs...
-export PATH=$PATH:/Library/Haskell/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin:/usr/local/share/npm/bin:$HOME/.rbenv/bin:$HOME/.cabal/bin
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin
 export LANG="en_US.UTF-8"
 
 # Go path settings
@@ -86,8 +86,8 @@ load-nvmrc() {
   fi
 }
 
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+# add-zsh-hook chpwd load-nvmrc
+# load-nvmrc
 
 export PATH="/usr/local/sbin:$PATH"
 export EDITOR="vim"
@@ -104,10 +104,9 @@ fi
 eval "$(fasd --init auto)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/kirstein/.nvm/versions/node/v6.10/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/kirstein/.nvm/versions/node/v6.10/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+[[ -f /home/kirstein/workspace/dashbird.io/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/kirstein/workspace/dashbird.io/node_modules/tabtab/.completions/serverless.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/kirstein/.nvm/versions/node/v6.10/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/kirstein/.nvm/versions/node/v6.10/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+[[ -f /home/kirstein/workspace/dashbird.io/node_modules/tabtab/.completions/sls.zsh ]] && . /home/kirstein/workspace/dashbird.io/node_modules/tabtab/.completions/sls.zsh
