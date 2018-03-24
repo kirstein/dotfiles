@@ -18,6 +18,7 @@ alias ra='ranger'
 alias weather='curl -4 http://wttr.in/Tallinn'
 alias av='source ./venv/bin/activate'
 alias t=". ~/.bash/todoist-wrapper.sh"
+alias fzf="fzf --preview 'head -$LINES {}' --color dark"
 
 # -------------------------------------------------------------------
 # osx only

@@ -108,16 +108,18 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " Search from directory using AG {{{
 function! FZFSearchInDir(...)
-  call fzf#vim#ag(join(a:000[1:], ' '), extend({'dir': a:1}, g:fzf#vim#default_layout))
+  call fzf#vim#ag(join(a:000[1:], ' '), extend({'dir': a:1}, fzf#vim#with_preview('right')))
 endfunction
 command! -nargs=+ -complete=dir FZFAgIn call FZFSearchInDir(<f-args>)
 " }}}
 
 " Project root files {{{
-function! FZFFindGitRoot()
-  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
-endfunction
-command! FZFProjectFiles execute 'Files' FZFFindGitRoot()
+" function! FZFFindGitRoot()
+"   return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+" endfunction
+" command! FZFProjectFiles execute 'Files' FZFFindGitRoot()
+" command! FZFProjectFiles execute fzf#vim#gitfiles('', fzf#vim#with_preview('right'))
+
 " }}}
 
 imap <expr> <c-x><c-f> fzf#vim#complete#path('git ls-files $(git rev-parse --show-toplevel)')
@@ -125,7 +127,7 @@ imap <c-x><c-j> <plug>(fzf-complete-file-ag)
 
 nmap K :Ag <C-R><C-W><CR>
 nnoremap /f :FZFAgIn %:p:h<CR>
-nnoremap /d :FZFProjectFiles<CR>
+nnoremap /d :call fzf#vim#gitfiles('', fzf#vim#with_preview('right'))<CR>
 nnoremap /a :Files %:p:h<CR>
 nnoremap /s :Files<CR>
 nnoremap /x :Tags <C-R><C-W>
