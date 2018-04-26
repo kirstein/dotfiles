@@ -60,10 +60,10 @@ Plug 'tpope/vim-eunuch' " linux helpers for vim :Rename etc
 Plug 'tpope/vim-surround' " cs ds for surrounding tags
 Plug 'tpope/vim-unimpaired' " basic toggling options
 Plug 'tpope/vim-vinegar' " make netrw great again
+Plug 'tpope/vim-repeat' " make repeat great again. Helps repeat all tpope libs
 Plug 'thinca/vim-visualstar' " better visual selection through *
 Plug 'pearofducks/ansible-vim' " ansible support
 Plug 'mustache/vim-mustache-handlebars' " mustache handlebars template helpers
-Plug 'tpope/vim-repeat' " make repeat great again. Helps repeat all tpope libs
 " Plug autoformat {{{
 Plug 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR>
@@ -114,12 +114,10 @@ command! -nargs=+ -complete=dir FZFAgIn call FZFSearchInDir(<f-args>)
 " }}}
 
 " Project root files {{{
-" function! FZFFindGitRoot()
-"   return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
-" endfunction
-" command! FZFProjectFiles execute 'Files' FZFFindGitRoot()
-" command! FZFProjectFiles execute fzf#vim#gitfiles('', fzf#vim#with_preview('right'))
-
+function! FZFFindGitRoot()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+command! FZFProjectFiles execute 'Files' FZFFindGitRoot()
 " }}}
 
 imap <expr> <c-x><c-f> fzf#vim#complete#path('git ls-files $(git rev-parse --show-toplevel)')
@@ -127,10 +125,10 @@ imap <c-x><c-j> <plug>(fzf-complete-file-ag)
 
 nmap K :Ag <C-R><C-W><CR>
 nnoremap /f :FZFAgIn %:p:h<CR>
-nnoremap /d :call fzf#vim#gitfiles('', fzf#vim#with_preview('right'))<CR>
+nnoremap /d :FZFProjectFiles<CR>
 nnoremap /a :Files %:p:h<CR>
 nnoremap /s :Files<CR>
-nnoremap /x :Tags <C-R><C-W>
+nnoremap /x :Tags<Cr>
 nnoremap /n :Marks<CR>
 nnoremap /c :BTags <C-R><C-W>
 nnoremap /b :Buffers<CR>
@@ -604,21 +602,12 @@ fun! ConsoleTime() range
   endif
 endfunction
 " }}}
-" Turn normal fn to coroutine {{{
-fun! Co() range
-  normal! 0dwiconst 
-  normal! f(i = Promise.coroutine(function * 
-  normal! f{%a);
-  normal! ``
-endfunction
-" }}}
 " }}}
 " I suck at spelling {{{
 
 iab reuqure require
 iab reuire require
 iab teh the
-iab testilo testlio
 iab quesiton question
 iab worksapce workspace
 iab stirngify stringify
