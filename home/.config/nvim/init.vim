@@ -24,7 +24,7 @@ Plug 'mattn/webapi-vim' " gist webapi
 Plug 'mattn/gist-vim' " gist
 let g:gist_post_private = 1
 " }}}
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' } " go compl
+" Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' } " go compl
 " Plug vim-go {{{
 " Plug 'fatih/vim-go' " go support
 fun! GoRunWrapper()
@@ -72,10 +72,20 @@ noremap <F3> :Autoformat<CR>
 Plug 'ternjs/tern_for_vim', { 'do': 'cd ~/.local/share/nvim/plugged/tern_for_vim && npm install && npm install -g git+https://github.com/ramitos/jsctags.git' }
 " }}}
 " Plug completion manager {{{
-Plug 'roxma/nvim-completion-manager'
-Plug 'roxma/nvim-cm-tern', {'do': 'npm install -g tern && npm install'}
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+" enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" IMPORTANTE: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
+
+" NOTE: you need to install completion sources to get completions. Check
+" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-tmux'
+Plug 'ncm2/ncm2-tern'
+Plug 'ncm2/ncm2-path'
 " }}}
 " Plug python {{{
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
