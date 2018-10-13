@@ -46,6 +46,7 @@ let g:go_term_enabled = 1
 " }}}
 Plug 'sonph/onehalf', {'rtp': 'vim/'} " vim theme
 Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-abolish'
 Plug 'sheerun/vim-polyglot' " language based plugins
 Plug 'othree/html5.vim'
 Plug 'duggiefresh/vim-easydir' " allow creating directories with edit
@@ -77,6 +78,22 @@ Plug 'roxma/nvim-yarp'
 " enable ncm2 for all buffers
 autocmd BufEnter * call ncm2#enable_for_buffer()
 
+" suppress the annoying 'match x of y', 'The only match' and 'Pattern not
+" found' messages
+set shortmess+=c
+
+" CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
+inoremap <c-c> <ESC>
+
+" When the <Enter> key is pressed while the popup menu is visible, it only
+" hides the menu. Use this mapping to close the menu and also start a new
+" line.
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+
+" Use <TAB> to select the popup menu:
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
 " IMPORTANTE: :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
 
@@ -84,7 +101,7 @@ set completeopt=noinsert,menuone,noselect
 " our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-tmux'
-Plug 'ncm2/ncm2-tern'
+Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
 Plug 'ncm2/ncm2-path'
 " }}}
 " Plug python {{{
@@ -113,8 +130,6 @@ nmap tig :Tig!<CR>
 " Plug fzf {{{
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " Search from directory using AG {{{
 function! FZFSearchInDir(...)
@@ -209,9 +224,9 @@ Plug 'pangloss/vim-javascript'
 let g:javascript_plugin_jsdoc = 1
 " }}}
 " gutentags {{{
-Plug 'ludovicchabant/vim-gutentags'
-set tags=./tags;,tags;
-let g:gutentags_ctags_exclude = ['*.min', 'node_modules']
+" Plug 'ludovicchabant/vim-gutentags'
+" set tags=./tags;,tags;
+" let g:gutentags_ctags_exclude = ['*.min', 'node_modules']
 " let g:gutentags_ctags_executable_javascript = '~/.config/nvim/scripts/jsctags.sh'
 " let g:gutentags_trace=1
 " }}}
@@ -306,6 +321,7 @@ set foldnestmax=20
 nnoremap <Leader>z zMzAzz
 " }}}
 " General {{{
+" set fillchars=vert:│
 nnoremap <silent> <Leader>cc :vimgrep /<C-r><C-w>/ %<CR>``:cw<CR>
 map <silent> nl :lnext<CR>
 map <silent> nl :lnext<CR>

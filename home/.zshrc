@@ -105,3 +105,5 @@ eval "$(fasd --init auto)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export NPM_TOKEN=$(cat ~/.npmrc | cut -d "=" -f 2)
+
+eval `ssh-agent` > /dev/null

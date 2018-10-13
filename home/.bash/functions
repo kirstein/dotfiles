@@ -1,10 +1,5 @@
 #!/bin/bash
 
-### Docker-compose up wrapper
-function dr() {
-  sudo docker-compose up --no-color $@ | grep -o "\{.*" 
-}
-
 ### Helper functions
 function server() {
   if [[ -z $1 ]]; then
