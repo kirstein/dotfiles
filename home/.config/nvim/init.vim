@@ -109,7 +109,7 @@ Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'roxma/python-support.nvim'
 let g:python_support_python3_requirements = get(g:,'python_support_python3_requirements',[]) + ['flake8', 'jedi']
 let g:python_support_python2_requirements = get(g:,'python_support_python2_requirements',[]) + ['flake8', 'jedi']
-let g:pymode_python = 'python3'
+let g:pymode_python = 'python'
 " }}}
 " Plug tagbar {{{
 Plug 'majutsushi/tagbar'

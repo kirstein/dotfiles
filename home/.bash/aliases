@@ -1,5 +1,5 @@
 alias awesome="echo you are awesome"
-alias dr=". ~/.bash/dr.sh"
+alias dr="sudo docker-compose up"
 
 # -------------------------------------------------------------------
 # Fasd
