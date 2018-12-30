@@ -1,5 +1,4 @@
 alias awesome="echo you are awesome"
-alias dr=". ~/.bash/dr.sh"
 alias awsh="bash ~/.bash/awsb/awsh.sh"
 
 # -------------------------------------------------------------------

@@ -15,6 +15,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
     autocmd VimEnter * call AuPlugged()
   augroup END
 endif
+
 " }}}
 " Plugs {{{
 call plug#begin('~/.local/share/nvim/plugged')
@@ -105,11 +106,11 @@ Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
 Plug 'ncm2/ncm2-path'
 " }}}
 " Plug python {{{
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
-Plug 'roxma/python-support.nvim'
-let g:python_support_python3_requirements = get(g:,'python_support_python3_requirements',[]) + ['flake8', 'jedi']
-let g:python_support_python2_requirements = get(g:,'python_support_python2_requirements',[]) + ['flake8', 'jedi']
-let g:pymode_python = 'python3'
+" Plug 'python-mode/python-mode', { 'branch': 'develop' }
+" Plug 'roxma/python-support.nvim'
+" let g:python_support_python3_requirements = get(g:,'python_support_python3_requirements',[]) + ['flake8', 'jedi']
+" let g:python_support_python2_requirements = get(g:,'python_support_python2_requirements',[]) + ['flake8', 'jedi']
+" let g:pymode_python = 'python3'
 " }}}
 " Plug tagbar {{{
 Plug 'majutsushi/tagbar'

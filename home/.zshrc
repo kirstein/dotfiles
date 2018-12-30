@@ -64,7 +64,8 @@ export NPM_TOKEN=$(cat ~/.npmrc | cut -d "=" -f 2)
 export FA_NPM_TOKEN=4D529EA4-84BC-4650-90AE-6CC6D3002C10
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # Custom lambda template
 source ~/.bash/custom-lambda.zsh-theme
@@ -107,12 +108,4 @@ fi
 eval "$(fasd --init auto)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval `ssh-agent` > /dev/null
-
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/kirstein/workspace/log-pusher/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/kirstein/workspace/log-pusher/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/kirstein/workspace/log-pusher/node_modules/tabtab/.completions/sls.zsh ]] && . /home/kirstein/workspace/log-pusher/node_modules/tabtab/.completions/sls.zsh
+export NPM_TOKEN=$(cat ~/.npmrc | cut -d "=" -f 3) 2> /dev/null
