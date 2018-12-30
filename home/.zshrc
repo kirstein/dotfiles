@@ -60,6 +60,9 @@ export LANG="en_US.UTF-8"
 export PATH=$PATH:$GOPATH/bin
 export GOPATH=$HOME/go
 
+export NPM_TOKEN=$(cat ~/.npmrc | cut -d "=" -f 2)
+export FA_NPM_TOKEN=4D529EA4-84BC-4650-90AE-6CC6D3002C10
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
@@ -104,6 +107,12 @@ fi
 eval "$(fasd --init auto)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export NPM_TOKEN=$(cat ~/.npmrc | cut -d "=" -f 2)
-
 eval `ssh-agent` > /dev/null
+
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/kirstein/workspace/log-pusher/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/kirstein/workspace/log-pusher/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/kirstein/workspace/log-pusher/node_modules/tabtab/.completions/sls.zsh ]] && . /home/kirstein/workspace/log-pusher/node_modules/tabtab/.completions/sls.zsh

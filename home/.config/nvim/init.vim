@@ -556,7 +556,7 @@ endif
 autocmd FileType ruby,python,javascript,coffee,vim autocmd BufWritePre <buffer> match ErrorMsg '\%>100v.\+'
 " }}}
 " Remove trailing whitespaces when dealing with certain languages  {{{
-autocmd FileType ruby,python,javascript,coffee autocmd BufWritePre <buffer> :%s/ \+$//ge
+autocmd FileType ruby,python,javascript,coffee,markdown autocmd BufWritePre <buffer> :%s/ \+$//ge
 " " }}}
 " Show trailing whitespaces {{{
 highlight ExtraWhitespace ctermbg=red guibg=red

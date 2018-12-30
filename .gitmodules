@@ -7,3 +7,6 @@
 [submodule "home/.bash/zsh-autosuggestions"]
 	path = home/.bash/zsh-autosuggestions
 	url = git://github.com/zsh-users/zsh-autosuggestions
+[submodule "home/.bash/awsb"]
+	path = home/.bash/awsb
+	url = git@github.com:kirstein/awsb.git
