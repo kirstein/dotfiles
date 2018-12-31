@@ -9,4 +9,4 @@
   url = https://github.com/zsh-users/zsh-autosuggestions.git
 [submodule "home/.bash/awsh"]
 	path = home/.bash/awsh
-	url = git@github.com:kirstein/awsh.git
+  url  = https://github.com/kirstein/awsh.git
