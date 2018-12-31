@@ -1,5 +1,5 @@
 alias awesome="echo you are awesome"
-alias awsh="bash ~/.bash/awsb/awsh.sh"
+alias awsh="~/.bash/awsh/awsh.sh"
 
 # -------------------------------------------------------------------
 # Fasd

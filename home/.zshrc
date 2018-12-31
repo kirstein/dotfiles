@@ -63,9 +63,9 @@ export GOPATH=$HOME/go
 export NPM_TOKEN=$(cat ~/.npmrc | cut -d "=" -f 2)
 export FA_NPM_TOKEN=4D529EA4-84BC-4650-90AE-6CC6D3002C10
 
-export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-source $(brew --prefix nvm)/nvm.sh
+# export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# source $(brew --prefix nvm)/nvm.sh
 
 # Custom lambda template
 source ~/.bash/custom-lambda.zsh-theme
