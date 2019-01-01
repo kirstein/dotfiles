@@ -1,5 +1,6 @@
 ### Load bashrc
 . ~/.bashrc
+test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.bash/oh-my-zsh
