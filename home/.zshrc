@@ -1,6 +1,6 @@
 ### Load bashrc
 . ~/.bashrc
-test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv 2> /dev/null)
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.bash/oh-my-zsh
@@ -61,7 +61,7 @@ export LANG="en_US.UTF-8"
 export PATH=$PATH:$GOPATH/bin
 export GOPATH=$HOME/go
 
-# export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # source $(brew --prefix nvm)/nvm.sh
 
@@ -106,4 +106,14 @@ fi
 eval "$(fasd --init auto)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export NPM_TOKEN=$(cat ~/.npmrc | cut -d "=" -f 3) 2> /dev/null
+export NPM_TOKEN=$(cat ~/.npmrc | cut -d "=" -f 2) 2> /dev/null
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/kirstein/workspace/hub/internal-monitoring/cloudwatch-events/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/kirstein/workspace/hub/internal-monitoring/cloudwatch-events/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/kirstein/workspace/hub/internal-monitoring/cloudwatch-events/node_modules/tabtab/.completions/sls.zsh ]] && . /home/kirstein/workspace/hub/internal-monitoring/cloudwatch-events/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /home/kirstein/workspace/hub/internal-monitoring/cloudwatch-events/node_modules/tabtab/.completions/slss.zsh ]] && . /home/kirstein/workspace/hub/internal-monitoring/cloudwatch-events/node_modules/tabtab/.completions/slss.zsh

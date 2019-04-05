@@ -1,5 +1,9 @@
 #!/bin/bash
 
+function mssh() {
+  ssh ec2-user@$1 -i ~/.ssh/master
+}
+
 ### Helper functions
 function server() {
   if [[ -z $1 ]]; then
@@ -126,3 +130,12 @@ vimg() {
 ec2() {
   aws ec2 describe-instances --filters "Name=tag:Service,Values=$@" --query 'Reservations[].Instances[]' --output json | jq -r 'map({ private: .PrivateIpAddress, public: .PublicIpAddress, tags: .Tags}) | map(select(.private | length > 0))'
 }
+
+topp() (
+  $* &
+  pid="$!"
+  trap ':' INT
+  echo 'CPU  MEM'
+  while sleep 1; do ps --no-headers -o '%cpu,%mem' -p "$pid"; done
+  kill "$pid"
+)
