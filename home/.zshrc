@@ -1,5 +1,6 @@
 ### Load bashrc
 . ~/.bashrc
+test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv 2> /dev/null)
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.bash/oh-my-zsh
@@ -61,8 +62,8 @@ export PATH=$PATH:$GOPATH/bin
 export GOPATH=$HOME/go
 
 export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-source $(brew --prefix nvm)/nvm.sh
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# source $(brew --prefix nvm)/nvm.sh
 
 # Custom lambda template
 source ~/.bash/custom-lambda.zsh-theme
@@ -105,6 +106,5 @@ fi
 eval "$(fasd --init auto)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export NPM_TOKEN=$(cat ~/.npmrc | cut -d "=" -f 3) 2> /dev/null
-
-# eval `ssh-agent` > /dev/null
+export NPM_TOKEN=$(cat ~/.npmrc | cut -d "=" -f 2) 2> /dev/null
+export PATH="/usr/local/opt/ruby/bin:$PATH"
