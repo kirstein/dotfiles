@@ -107,4 +107,13 @@ eval "$(fasd --init auto)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export NPM_TOKEN=$(cat ~/.npmrc | cut -d "=" -f 2) 2> /dev/null
-export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/kirstein/workspace/hub/internal-monitoring/cloudwatch-events/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/kirstein/workspace/hub/internal-monitoring/cloudwatch-events/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/kirstein/workspace/hub/internal-monitoring/cloudwatch-events/node_modules/tabtab/.completions/sls.zsh ]] && . /home/kirstein/workspace/hub/internal-monitoring/cloudwatch-events/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /home/kirstein/workspace/hub/internal-monitoring/cloudwatch-events/node_modules/tabtab/.completions/slss.zsh ]] && . /home/kirstein/workspace/hub/internal-monitoring/cloudwatch-events/node_modules/tabtab/.completions/slss.zsh

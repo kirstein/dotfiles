@@ -6,4 +6,7 @@
 	url = https://github.com/Goles/Battery.git
 [submodule "home/.bash/zsh-autosuggestions"]
 	path = home/.bash/zsh-autosuggestions
-	url = git://github.com/zsh-users/zsh-autosuggestions
+  url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "home/.bash/awsh"]
+	path = home/.bash/awsh
+  url  = https://github.com/kirstein/awsh.git
